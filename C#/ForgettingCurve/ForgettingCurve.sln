@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgettingCurve", "ForgettingCurve.csproj", "{65CF6535-7C94-4B44-84D3-F34AEFEC88DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65CF6535-7C94-4B44-84D3-F34AEFEC88DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65CF6535-7C94-4B44-84D3-F34AEFEC88DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65CF6535-7C94-4B44-84D3-F34AEFEC88DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65CF6535-7C94-4B44-84D3-F34AEFEC88DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C8BDA96-FDEB-4271-ACF1-0E9B00AE9034}
+	EndGlobalSection
+EndGlobal

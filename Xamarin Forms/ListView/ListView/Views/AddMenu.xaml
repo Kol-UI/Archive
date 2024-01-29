@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ListView.Views.AddMenu"
+    Title="Addind Specific Item"
+    Background="{StaticResource GradientScooter}">
+
+    <ContentPage.Resources>
+        <Style x:Key="FrameStyle" TargetType="Frame">
+            <Setter Property="HeightRequest" Value="80"/>
+            <Setter Property="WidthRequest" Value="80"/>
+            <Setter Property="CornerRadius" Value="40"/>
+            <Setter Property="HasShadow" Value="True"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <StackLayout>
+            <ScrollView>
+        <StackLayout Orientation="Vertical" Margin="0,5,0,0" >
+
+            <StackLayout Orientation="Vertical">
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="Start"
+                       Margin="10,10,0,0"
+                       Text="Enter Item's Name :"
+                       TextColor="{StaticResource AppColorsWhite}"
+                       FontSize="26"/>
+                <Entry x:Name="TitleEntry"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       Placeholder="Item's Title"
+                       PlaceholderColor="{StaticResource AppColorsWhite}"
+                       BackgroundColor="Transparent"
+                       Opacity="0.8"
+                       HeightRequest="75"
+                       WidthRequest="150"
+                       Margin="0,5,0,0"/>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="Start"
+                       Margin="10,10,0,0"
+                       Text="Enter Item's Tag :"
+                       TextColor="{StaticResource AppColorsWhite}"
+                       FontSize="26"/>
+                <Entry x:Name="TagEntry"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       Placeholder="Item's Tag"
+                       PlaceholderColor="{StaticResource AppColorsWhite}"
+                       BackgroundColor="Transparent"
+                       Opacity="0.8"
+                       HeightRequest="75"
+                       WidthRequest="150"
+                       Margin="0,5,0,0"/>
+                <Label VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="Start"
+                       Margin="10,10,0,0"
+                       Text="Select Item's Color :"
+                       TextColor="{StaticResource AppColorsWhite}"
+                       FontSize="32"/>
+            </StackLayout>
+
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="100,100,100,100" ColumnSpacing="10">
+
+            
+            <!-- Row 0 -->
+            <Frame x:Name="ColorFramePink" BackgroundColor="{StaticResource AppColorsPink}" Style="{StaticResource FrameStyle}" Grid.Row="0" Grid.Column="0">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="PinkTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckPinkPng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+            <Frame x:Name="ColorFrameBlue" BackgroundColor="{StaticResource AppColorsBlue}" Style="{StaticResource FrameStyle}" Grid.Row="0" Grid.Column="1">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BlueTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckBluePng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+            <Frame x:Name="ColorFrameBlueTurquoise" BackgroundColor="{StaticResource AppColorsBlueTurquoise}" Style="{StaticResource FrameStyle}" Grid.Row="0" Grid.Column="2">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BlueTurquoiseTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckBlueTurquoisePng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+            <Frame x:Name="ColorFrameViolet" BackgroundColor="{StaticResource AppColorsViolet}" Style="{StaticResource FrameStyle}" Grid.Row="0" Grid.Column="3">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="VioletTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckVioletPng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+
+
+            <!-- Row 1 -->
+            <Frame x:Name="ColorFramePurple" BackgroundColor="{StaticResource AppColorsPurple}" Style="{StaticResource FrameStyle}" Grid.Row="1" Grid.Column="0">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="PurpleTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckPurplePng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+            <Frame x:Name="ColorFrameStrawberry" BackgroundColor="{StaticResource AppColorsStrawberry}" Style="{StaticResource FrameStyle}" Grid.Row="1" Grid.Column="1">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="StrawberryTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckStrawberryPng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+            <Frame x:Name="ColorFrameRed" BackgroundColor="{StaticResource AppColorsRed}" Style="{StaticResource FrameStyle}" Grid.Row="1" Grid.Column="2">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="RedTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckRedPng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+            <Frame x:Name="ColorFrameOrange" BackgroundColor="{StaticResource AppColorsBrightOrange}" Style="{StaticResource FrameStyle}" Grid.Row="1" Grid.Column="3">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OrangeTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckOrangePng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+
+
+            <!-- Row 2 -->
+            <Frame x:Name="ColorFrameYellow" BackgroundColor="{StaticResource AppColorsYellow}" Style="{StaticResource FrameStyle}" Grid.Row="2" Grid.Column="0">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="YellowTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckYellowPng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+            <Frame x:Name="ColorFrameGreen" BackgroundColor="{StaticResource AppColorsGreen}" Style="{StaticResource FrameStyle}" Grid.Row="2" Grid.Column="1">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GreenTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckGreenPng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+            <Frame x:Name="ColorFrameIceMint" BackgroundColor="{StaticResource AppColorsIceMint}" Style="{StaticResource FrameStyle}" Grid.Row="2" Grid.Column="2">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="IceMintTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckIceMintPng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+            <Frame x:Name="ColorFrameLilac" BackgroundColor="{StaticResource AppColorsLilac}" Style="{StaticResource FrameStyle}" Grid.Row="2" Grid.Column="3">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="LilacTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckLilacPng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+
+
+            <!-- Row 3 -->
+            <Frame x:Name="ColorFrameWhite" BackgroundColor="{StaticResource AppColorsWhite}" Style="{StaticResource FrameStyle}" Grid.Row="3" Grid.Column="1">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="WhiteTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckWhitePng" Source="Check.png" IsVisible="True" Scale="0.5"/>
+            </Frame>
+            <Frame x:Name="ColorFrameBlack" BackgroundColor="{StaticResource AppColorsBlack}" Style="{StaticResource FrameStyle}" Grid.Row="3" Grid.Column="2">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BlackTapped"/>
+                </Frame.GestureRecognizers>
+                    <Image x:Name="CheckBlackPng" Source="Check.png" IsVisible="False" Scale="0.5"/>
+            </Frame>
+
+
+            </Grid>
+
+            </StackLayout>
+            </ScrollView>
+            
+
+
+
+
+
+
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Background="{StaticResource GradientRedBlackGreen}">
+                <Button VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Cancel"
+                        BackgroundColor="Transparent"
+                        CornerRadius="25"
+                        TextColor="{StaticResource AppColorsRed}"
+                        BorderWidth="1"
+                        BorderColor="{StaticResource AppColorsRed}"
+                        HeightRequest="50"
+                        WidthRequest="125"
+                        Margin="0,10,0,15"
+                        Clicked="Button_Cancel"/>
+
+                <Button x:Name="ValidateB"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Validate"
+                        BackgroundColor="Transparent"
+                        CornerRadius="25"
+                        TextColor="{StaticResource AppColorsGreen}"
+                        BorderWidth="1"
+                        BorderColor="{StaticResource AppColorsGreen}"
+                        HeightRequest="50"
+                        WidthRequest="125"
+                        Margin="0,10,0,15"/>
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

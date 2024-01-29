@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ListView.Views.ContentPageTest"
+    xmlns:controls="clr-namespace:ListView.Controls"
+    Background="{StaticResource GradientAntiqueWhiteAndWhite}">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+                <ScrollView Grid.Row="0">
+                <StackLayout Orientation="Vertical">
+                <controls:CardView BorderColor="BlanchedAlmond"
+                                   CardTitle="Contact 1"
+                                   CardDescription="Chef d'entreprise"
+                                   IconBackgroundColor="SlateGray"
+                                   IconImageSource="user.png"
+                                   CheckBoxColor="BlanchedAlmond"/>
+
+                <controls:CardView BorderColor="{StaticResource AppColorsGreen}"
+                                   CardTitle="Contact 2"
+                                   CardDescription="Prof de math"
+                                   IconBackgroundColor="SlateGray"
+                                   IconImageSource="user.png"
+                                   CheckBoxColor="{StaticResource AppColorsGreen}"/>
+
+                <controls:CardView BorderColor="{StaticResource AppColorsBlack}"
+                                   CardTitle="Contact 3"
+                                   CardDescription="Prof de physique"
+                                   IconBackgroundColor="SlateGray"
+                                   IconImageSource="user.png"
+                                   CheckBoxColor="{StaticResource AppColorsBlack}"/>
+
+                <controls:CardView BorderColor="{StaticResource AppColorsBrightOrange}"
+                                   CardTitle="Voisin de classe"
+                                   CardDescription="Classe de math"
+                                   IconBackgroundColor="SlateGray"
+                                   IconImageSource="user.png"
+                                   CheckBoxColor="{StaticResource AppColorsBrightOrange}"/>
+
+                <controls:CardView BorderColor="{StaticResource MainColor}"
+                                   CardTitle="Jean du 14"
+                                   CardDescription="Quelqu'un"
+                                   IconBackgroundColor="SlateGray"
+                                   IconImageSource="user.png"
+                                   CheckBoxColor="{StaticResource MainColor}"/>
+
+                <controls:CardView BorderColor="{StaticResource AppColorsBlueTurquoise}"
+                                   CardTitle="Jean 1"
+                                   CardDescription=""
+                                   IconBackgroundColor="SlateGray"
+                                   IconImageSource="user.png"
+                                   CheckBoxColor="{StaticResource AppColorsBlueTurquoise}"/>
+
+                <controls:CardView BorderColor="{StaticResource AppColorsIceMint}"
+                                   CardTitle="Jean 2"
+                                   CardDescription=""
+                                   IconBackgroundColor="SlateGray"
+                                   IconImageSource="user.png"
+                                   CheckBoxColor="{StaticResource AppColorsIceMint}"/>
+
+                <controls:CardView BorderColor="{StaticResource AppColorsIceMint}"
+                                   CardTitle="Absolutly not Jean"
+                                   CardDescription="Quelqu'un"
+                                   IconBackgroundColor="SlateGray"
+                                   IconImageSource="user.png"
+                                   CheckBoxColor="{StaticResource AppColorsIceMint}"/>
+                </StackLayout>
+                </ScrollView>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand"
+                             Grid.Row="1">
+                <Button VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Cancel"
+                        BackgroundColor="Transparent"
+                        CornerRadius="25"
+                        TextColor="{StaticResource AppColorsRed}"
+                        BorderWidth="1"
+                        BorderColor="{StaticResource AppColorsRed}"
+                        HeightRequest="50"
+                        WidthRequest="125"
+                        Margin="0,10,0,15"
+                        Clicked="Button_CancelSharing"/>
+
+                <Button VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Validate"
+                        BackgroundColor="Transparent"
+                        CornerRadius="25"
+                        TextColor="{StaticResource AppColorsGreen}"
+                        BorderWidth="1"
+                        BorderColor="{StaticResource AppColorsGreen}"
+                        HeightRequest="50"
+                        WidthRequest="125"
+                        Margin="0,10,0,15"
+                        Clicked="Button_ValidateSharing"/>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

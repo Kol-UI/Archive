@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ShapesApp.Controls.GraphBars"
+    xmlns:local="clr-namespace:ShapesApp.ViewModels"
+    xmlns:pckView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:StatsControlBars="clr-namespace:ShapesApp.Controls.BarsGraph"
+    BackgroundColor="{StaticResource WhiteGrayBackground}">
+    <ContentView.BindingContext>
+        <local:GraphBarsViewModels/>
+    </ContentView.BindingContext>
+    <ContentView.Content>
+        <StackLayout BackgroundColor="Transparent">
+        <ScrollView x:Name="HorizontalScrollView"
+                    Orientation="Horizontal"
+                    BackgroundColor="Transparent"
+                    HorizontalScrollBarVisibility="Never"
+                    VerticalScrollBarVisibility="Never">
+
+                <StackLayout Orientation="Horizontal"
+                             BackgroundColor="Transparent">
+
+                
+                    <StatsControlBars:BarsOne x:Name="PrimaryFrameGraph"/>
+
+                    <StatsControlBars:BarsTwo x:Name="SecondaryFrameGraph"/>
+
+                    <StatsControlBars:BarsThree x:Name="ThirdFrameGraph"/>
+
+                    <StatsControlBars:BarsFour x:Name="FourthFrameGraph"/>
+
+                </StackLayout>
+            </ScrollView>
+
+            
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Transparent">
+
+            <Frame x:Name="FrameButtonThisWeek" Style="{StaticResource WeekSelection}">
+                <Label x:Name="ThisWeekText"  Text="This Week" FontSize="8" TextColor="{StaticResource OxColorsWhite}"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Frame>
+
+            <Frame x:Name="FrameButtonPreviousWeek" Style="{StaticResource WeekSelection}">
+                <Label x:Name="PreviousWeekText" Text="Previous Week" FontSize="8" TextColor="{StaticResource OxColorsWhite}"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Frame>
+
+            <Frame x:Name="FrameButtonTwoWeeks" Style="{StaticResource WeekSelection}">
+                <Label x:Name="TwoWeeksText" Text="Two Weeks Ago" FontSize="8" TextColor="{StaticResource OxColorsWhite}"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Frame>
+
+            <Frame x:Name="FrameButtonThreeWeeks" Style="{StaticResource WeekSelection}">
+                <Label x:Name="ThreeWeeksText" Text="Three Weeks Ago" FontSize="8" TextColor="{StaticResource OxColorsWhite}"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Frame>
+
+        </StackLayout>
+
+
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

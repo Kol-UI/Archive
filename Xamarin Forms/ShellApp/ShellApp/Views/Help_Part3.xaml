@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ShellApp.Views.Help_Part3"
+    Title="AIDE - GESTION DU PROFILE">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#a5ebe9" Offset="0.3"/>
+            <GradientStop Color="#74dbd8" Offset="0.5"/>
+            <GradientStop Color="#08a4a7" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Margin="20">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#a5ebe9" Offset="0.3"/>
+                    <GradientStop Color="#74dbd8" Offset="0.5"/>
+                    <GradientStop Color="#08a4a7" Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <Frame Margin="0,10,0,10" Opacity="0.7">
+                <StackLayout>
+                <!-- Partie 3-->
+                <Label Text="Partie 3 : Gérer mon compte"
+                       Style="{StaticResource Help_Label_Title}"/>
+                <Label x:Name="article3_1"
+                       Text="3.1. Comment faire si je n'ai pas reçu mon code d'activation ou qu'il est incorrect ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article3_2"
+                       Text="3.2. Comment savoir si mon smartphone est compatible ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_2"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article3_3"
+                       Text="3.3 Pourquoi créer un compte est-il nécessaire ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_3"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article3_4"
+                       Text="3.4 Pourquoi mon adresse e-mail n'est-elle pas acceptée lors de ma création de compte ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_4"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article3_5"
+                       Text="3.5 Comment modifier mon mot de passe ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_5"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article3_6"
+                       Text="3.6 Pourquoi activer la géolocalisation de mes scans?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_6"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article3_7"
+                       Text="3.7 Comment mes scans sont-ils gérés dans le cloud ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_7"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article3_8"
+                       Text="3.8 Comment m'assurer que mes scans sont disponibles sur tous mes appareils ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_8"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article3_9"
+                       Text="3.9 Quelle est la politique de confidentialité ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_9"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article3_10"
+                       Text="3.10 Comment changer l'adresse e-mail utilisée avec mon compte ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_10"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article3_11"
+                       Text="3.11 Comment supprimer mon compte ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_3_11"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

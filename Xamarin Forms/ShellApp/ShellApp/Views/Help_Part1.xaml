@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ShellApp.Views.Help_Part1"
+    Title="AIDE - GESTION DES SCANS">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#a5ebe9" Offset="0.3"/>
+            <GradientStop Color="#74dbd8" Offset="0.5"/>
+            <GradientStop Color="#08a4a7" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Margin="20">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#a5ebe9" Offset="0.3"/>
+                    <GradientStop Color="#74dbd8" Offset="0.5"/>
+                    <GradientStop Color="#08a4a7" Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <Frame Margin="0,10,0,10" Opacity="0.7">
+                <StackLayout>
+                <!-- Partie 1-->
+                <Label Text="Partie 1 : Gestion des scans, classer, partager, supprimer et enrichir"
+                       Style="{StaticResource Help_Label_Title}"/>
+                <Label x:Name="article1_1"
+                       Text="1.1. Comment retrouver mes scans ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_2"
+                       Text="1.2. Comment classer un scan en cours ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_2"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_3"
+                       Text="1.3 Comment grouper des pages scannées à différents moments ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_3"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_4"
+                       Text="1.4 Comment enrichir mon scan en rajoutant une photo ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_4"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_5"
+                       Text="1.5 Comment partager un scan ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_5"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_6"
+                       Text="1.6 Comment mettre une alerte sur un scan ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_6"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_7"
+                       Text="1.7 Comment importer les événements de mon calendrier ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_7"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_8"
+                       Text="1.8 Comment lier un scan à un événement de mon calendrier ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_8"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_9"
+                       Text="1.9 Comment créer des sous-dossiers ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_9"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_10"
+                       Text="1.10 Comment changer la couleur associée aux dossiers/sous-dossiers ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_10"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_11"
+                       Text="1.11 Comment ajouter un statut d'avancement à une note ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_11"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_12"
+                       Text="1.12 Comment activer/désactiver le classement automatique ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_12"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_13"
+                       Text="1.13 Comment reclasser un scan qui a été classé de façon automatique ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_13"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_14"
+                       Text="1.14 Comment déplacer mes scans effectués avec les anciennes applications ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_14"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_15"
+                       Text="1.15 Comment supprimer un scan ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_15"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article1_16"
+                       Text="1.16 Comment fonctionne l'agenda ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_1_16"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

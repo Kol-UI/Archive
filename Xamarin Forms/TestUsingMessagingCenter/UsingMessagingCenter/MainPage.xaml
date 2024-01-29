@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UsingMessagingCenter.MainPage">
+    <StackLayout Margin="30,0,30,10">
+        <Label Text="MessagingCenter Demo"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Button Text="Say Hi"
+                BackgroundColor="CadetBlue"
+                CornerRadius="15"
+                HeightRequest="40"
+                Clicked="OnSayHiButtonClicked" />
+
+        <Button Text="Time"
+                BackgroundColor="CadetBlue"
+                CornerRadius="15"
+                HeightRequest="40"
+                Clicked="OnTime" />
+
+        <Button Text="Say Hi to John"
+                BackgroundColor="PaleGreen"
+                CornerRadius="15"
+                HeightRequest="40"
+                Clicked="OnSayHiToJohnButtonClicked" />
+
+        <Button Text="Say Hi to Richard"
+                BackgroundColor="PaleGreen"
+                CornerRadius="15"
+                HeightRequest="40"
+                Clicked="OnSayHiToRichardButtonClicked" />
+
+        <Button Text="Count"
+                BackgroundColor="Orange"
+                CornerRadius="15"
+                HeightRequest="40"
+                Clicked="CountMessages" />
+
+        <Button Text="DeleteFirst"
+                BackgroundColor="Orange"
+                CornerRadius="15"
+                HeightRequest="40"
+                Clicked="OnDeleteFirst" />
+
+        <Button Text="Clear"
+                BackgroundColor="Red"
+                CornerRadius="15"
+                HeightRequest="40"
+                Clicked="OnClear" />
+
+        <Button Text="Unsubscribe"
+                BackgroundColor="Red"
+                CornerRadius="15"
+                HeightRequest="40"
+                Clicked="OnUnsubscribeButtonClicked" />
+        <ListView ItemsSource="{Binding Greetings}"/>
+    </StackLayout>
+</ContentPage>

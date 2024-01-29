@@ -1,0 +1,46 @@
+﻿<Window x:Class="DrinkOrder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DrinkOrder"
+        mc:Ignorable="d"
+        Title="Drink order" Height="350" Width="525" ResizeMode="NoResize" Icon="Images/party.png">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/bar-2339180_640.jpg"/>
+        </Grid.Background>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="517">
+            <Grid Height="319">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="lbOrderDrink" Content="Order your drink" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="20" Background="Black" BorderBrush="#FFFB5D22" BorderThickness="2" Foreground="#FFFB5D22" FontFamily="Tahoma"/>
+                <Grid Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="259">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lbDrink" Content="Drink :" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFB5D22" FontSize="14" FontFamily="Tahoma"/>
+                    <TextBox x:Name="tbDrink" Grid.Column="1" HorizontalAlignment="Center" Height="24" Margin="10,28,13,28" TextWrapping="Wrap" VerticalAlignment="Center" Width="184" AutomationProperties.HelpText="Choose a drink..." MaxLines="1"/>
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="259">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lbSugars" Content="Sugars :" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFB5D22" FontSize="14" FontFamily="Tahoma"/>
+                    <TextBox x:Name="tbSugars" HorizontalAlignment="Center" Height="22" Margin="10,30,17,28" TextWrapping="Wrap" VerticalAlignment="Center" Width="171" AutomationProperties.HelpText="Choose a drink..." MaxLines="1" Grid.Column="1"/>
+                </Grid>
+                <Button x:Name="btOrderDrink" Content="Place order" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Width="104" Background="White" Foreground="#FFFB5D22" BorderBrush="#FFFB5D22" FontSize="16" Margin="0" Click="btOrderDrink_Click" FontFamily="Tahoma" Height="31"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

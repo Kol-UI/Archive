@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AwesomeApp.Popups.SystemPaddingPopupPage"
+    xmlns:vm="clr-namespace:AwesomeApp.ViewModels"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    CloseWhenBackgroundIsClicked="True"
+    HasSystemPadding="{OnPlatform Default='False',
+                                  Android='True'}">
+    <pages:PopupPage.Animation>
+        <animations:MoveAnimation
+            PositionIn="Bottom"
+            PositionOut="Bottom"
+            />
+    </pages:PopupPage.Animation>
+
+    <!-- MAIN GRID -->
+    <Grid
+        VerticalOptions="EndAndExpand"
+        HorizontalOptions="FillAndExpand"
+        RowDefinitions="Auto,Auto"
+        BackgroundColor="White"
+        Margin="0"
+        >
+        <!-- BG -->
+        <BoxView Margin="0" />
+
+        <Frame
+            HeightRequest="50"
+            BorderColor="LightGray"
+            Margin="0,-50,0,0"
+            Padding="0,50,0,50"
+            HasShadow="False"
+            CornerRadius="0"
+            >
+            <Grid
+                Margin="0,0,0,-30"
+                ColumnDefinitions="Auto,*"
+                RowDefinitions="35,*"
+                ColumnSpacing="0"
+                >
+                <Label
+                    Grid.Column="1"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="EndAndExpand"
+                    Padding="0,15,25,0"
+                    Margin="0,0,0,-5"
+                    TextColor="Orange"
+                    FontSize="24"
+                    Text="X"
+                    >
+                </Label>
+                <StackLayout
+                    IsVisible="True"
+                    Grid.RowSpan="2"
+                    Margin="10,0,-20,0"
+                    >
+                </StackLayout>
+                <Label
+                    Padding="24,10,0,10"
+                    Grid.RowSpan="2"
+                    HeightRequest="40"
+                    WidthRequest="60"
+                    VerticalOptions="EndAndExpand"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    IsVisible="True"
+                    Text="ICON"
+                    />
+                <Label
+                    Padding="24,0,0,10"
+                    Grid.Column="1"
+                    Grid.RowSpan="2"
+                    VerticalOptions="EndAndExpand"
+                    FontSize="16"
+                    Text="Title"
+                    MaxLines="1"
+                    LineBreakMode="TailTruncation"
+                    />
+            </Grid>
+
+        </Frame>
+
+        <!-- FILTER LIST -->
+        <!--
+        <ScrollView
+            Grid.Row="1"
+            VerticalScrollBarVisibility="Never"
+            >
+            <StackLayout
+                Margin="0"
+                x:Name="FilterStackLayout"
+                BindableLayout.ItemsSource="{Binding Items}"
+                >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <local:OptionsPopupItemTemplate />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+            -->
+
+        <ListView
+            Grid.Row="1"
+            VerticalScrollBarVisibility="Never"
+            HeightRequest="200"
+            x:Name="ListViewFilter"
+            ItemsSource="{Binding newItems}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!--</ScrollView>-->
+    </Grid>
+</pages:PopupPage>
+

@@ -1,0 +1,17 @@
+﻿<Page x:Class="WpfApplication1.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication1"
+      mc:Ignorable="d"
+      Title="Page2" Width="650" Height="445">
+
+    <Grid>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,190,0,0" Width="650" Height="70" TextAlignment="Center" FontSize="48" RenderTransformOrigin="0.5,0.5">
+            <Hyperlink NavigateUri="MainPage.xaml">
+                Go to MainPage
+            </Hyperlink>
+        </TextBlock>
+    </Grid>
+</Page>

@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
+    <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
+    <PackageReference Include="Microcharts" Version="0.9.5.9" />
+    <PackageReference Include="Xamanimation" Version="1.3.0" />
+    <PackageReference Include="Sharpnado.Shadows" Version="1.2.0" />
+    <PackageReference Include="Sharpnado.MaterialFrame" Version="1.3.0" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="SkiaSharp" />
+    <None Remove="SkiaSharp.Views.Forms" />
+    <None Remove="SkiaSharp.Views" />
+    <None Remove="Microcharts.Forms" />
+    <None Remove="Microcharts" />
+    <None Remove="Resx\" />
+    <None Remove="Resx\AppResources.fr" />
+    <None Remove="Resources\Fonts\The_Snowday.ttf" />
+    <None Remove="Xamanimation" />
+    <None Remove="Sharpnado.Shadows" />
+    <None Remove="Sharpnado.MaterialFrame" />
+    <None Remove="Xamarin.Forms.PancakeView" />
+    <None Remove="Rg.Plugins.Popup" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resx\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\The_Snowday.ttf" />
+  </ItemGroup>
+</Project>

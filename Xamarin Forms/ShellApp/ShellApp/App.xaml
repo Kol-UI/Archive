@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellApp.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- Color Primary #5dcec7 & a5ebe9 -->
+
+            <!-- Color Gradient -->
+            <LinearGradientBrush x:Key="Gradient" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#a5ebe9" Offset="0.3" />
+                <GradientStop Color="#74dbd8" Offset="0.5"/>
+                <GradientStop Color="#08a4a7" Offset="1.0"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="Gradient2" StartPoint="1,0" EndPoint="1,1">
+                <GradientStop Color="#210f86" Offset="0.3"/>
+                <GradientStop Color="#6e1fa6" Offset="0.5"/>
+                <GradientStop Color="#ba412f" Offset="1.0"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="Gradient3" StartPoint="1,0" EndPoint="1,1">
+                <GradientStop Color="#210f86" Offset="0.3"/>
+                <GradientStop Color="#ba412f" Offset="1.0"/>
+            </LinearGradientBrush>
+
+            <Style x:Key="Help_Label_Title" TargetType="Label">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="FontSize" Value="22"/>
+            </Style>
+
+            <Style x:Key="Help_Label_Gesture" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextDecorations" Value="Underline"/>
+                <Setter Property="Padding" Value="0,5,0,5"/>
+            </Style>
+
+            <Style TargetType="Button" x:Key="Buttons">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="DarkSlateGray"/>
+                <Setter Property="BackgroundColor" Value="#a5ebe9"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="BorderColor" Value="#a5ebe9"/>
+                <Setter Property="WidthRequest" Value="125"/>
+                <Setter Property="HeightRequest" Value="150"/>
+                <Setter Property="ContentLayout" Value="Top,0"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList x:Name="CommonStates">
+                        <VisualStateGroup>
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Black"/>
+                                    <Setter Property="Scale" Value="0.95"/>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="LightGray"/>
+                                    <Setter Property="BorderColor" Value="LightGray"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <Style TargetType="ImageButton" x:Key="ImageButtons">
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList x:Name="CommonStates">
+                        <VisualStateGroup>
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale" Value="0.95"/>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

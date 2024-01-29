@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ShapesApp.Controls.InfoStats"
+    xmlns:local="clr-namespace:ShapesApp.ViewModels"
+    xmlns:pckView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    BackgroundColor="{StaticResource WhiteGrayBackground}">
+    <ContentView.Content>
+        <!-- Style="{StaticResource pckViewStyle}" -->
+        <Frame  x:Name="FrameInfoStats"
+                CornerRadius="10"
+                BackgroundColor="White"
+                Margin="10, 10, 10, 15"
+                HeightRequest="50"
+                Padding="7"
+                HasShadow="False">
+
+            <Grid ColumnDefinitions="2*, 25, 2*">
+
+                <Grid ColumnDefinitions="45, 70" RowDefinitions="25, 25" HorizontalOptions="Start" Grid.Column="0" Margin="10, 0, 0, 0">
+                    <StackLayout Grid.Column="0"
+                                 Grid.RowSpan="1"
+                                 Margin="0, 5, 0, 0">
+                        <Path Fill="#5D2FB9"
+                              HeightRequest="40"
+                              Aspect="Uniform"
+                              Data="M15.091,16C21.661,15.964,24,12.484,24,9.5a3.5,3.5,0,0,0-2.764-3.419c.136-.387.254-.742.333-1.011a3.887,3.887,0,0,0-.626-3.458A3.979,3.979,0,0,0,17.729,0H6.271A3.979,3.979,0,0,0,3.057,1.612,3.887,3.887,0,0,0,2.431,5.07c.079.269.2.624.333,1.011A3.5,3.5,0,0,0,0,9.5c0,2.984,2.339,6.464,8.909,6.5A5.06,5.06,0,0,1,9,16.921V20a1.883,1.883,0,0,1-2,2H6a1,1,0,0,0,0,2H18a1,1,0,0,0,0-2h-.992A1.885,1.885,0,0,1,15,20V16.92A5.058,5.058,0,0,1,15.091,16ZM20.5,8A1.5,1.5,0,0,1,22,9.5c0,2.034-1.609,4.2-6.036,4.47a4.847,4.847,0,0,1,.762-.821A15.132,15.132,0,0,0,20.453,7.99C20.469,7.991,20.483,8,20.5,8ZM2,9.5A1.5,1.5,0,0,1,3.5,8c.017,0,.031-.009.047-.01a15.132,15.132,0,0,0,3.727,5.159,4.847,4.847,0,0,1,.762.821C3.609,13.7,2,11.534,2,9.5ZM10.513,22A4.08,4.08,0,0,0,11,20V16.921a6.93,6.93,0,0,0-2.431-5.295A15.338,15.338,0,0,1,4.349,4.5a1.9,1.9,0,0,1,.31-1.694A1.994,1.994,0,0,1,6.271,2H17.729a1.994,1.994,0,0,1,1.612.81,1.9,1.9,0,0,1,.31,1.694,15.338,15.338,0,0,1-4.22,7.122A6.928,6.928,0,0,0,13,16.92V20a4.08,4.08,0,0,0,.487,2Z"
+                        />
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="Center" Grid.Column="1" Margin="0, 7, 0, 0" Orientation="Vertical">
+                        <Label Text="Files Reviewed"
+                                TextColor="{StaticResource GrayLabel}"
+                                FontSize="10"
+                                Grid.Row="0"/>
+                        <Label TextColor="{StaticResource OxColorsBlack}"
+                                FontSize="12"
+                                Grid.Row="1">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Today: "/>
+                                    <Span Text="{Binding ReviewCount}"/>
+                                    <Span Text="/"/>
+                                    <Span Text="5"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+
+
+                <BoxView WidthRequest="2"
+                         HorizontalOptions="Center"
+                         Grid.Column="1"
+                         Opacity="0.5"
+                         CornerRadius="20"
+                         Color="{StaticResource LightMainColor}"/>
+
+
+                <Grid ColumnDefinitions="45, 70" RowDefinitions="25, 25" HorizontalOptions="EndAndExpand" Margin="0, 0, 20, 0" Grid.Column="2">
+                    <StackLayout Grid.Column="0"
+                                 Grid.RowSpan="1"
+                                 Margin="0, 5, 0, 0">
+                        <Path Fill="#FFBB33"
+                              HeightRequest="40"
+                              Aspect="Uniform"
+                              Data="M349.485,86.766c-25.569-21.67-51.906-44.15-78.561-70.72L255.731,0.96l-14.915,15.107   c-47.985,48.113-70.656,121.987-80.5,166.307c-7.535-11.679-13.126-24.502-16.556-37.97l-9.013-34.795l-26.208,24.632   C62.619,177.345,32,220.11,32,288.592c-0.882,101.634,67.488,190.839,165.859,216.401c14.405,3.504,29.109,5.644,43.915,6.392   c4.864,0.352,18.793,0.703,21.18,0.554c120.685-3.63,216.608-102.565,216.507-223.305   C479.461,197.14,419.225,146.001,349.485,86.766z M259.858,469.048c-2.231,0.193-4.259,0.213-6.516,0.192   c-39.844-1.218-71.54-33.819-71.637-73.681c0-27.002,14.481-40.461,47.254-68.357c8.262-7.027,17.249-14.672,26.704-23.425   c8.284,7.517,16.333,14.332,23.765,20.656c32.922,27.939,50.107,43.804,50.107,71.062   C329.461,434.599,298.901,466.859,259.858,469.048z M366.759,431.334l-0.426,0.298c3.822-11.644,5.777-23.819,5.792-36.074   c0-48.233-31.645-75.108-65.12-103.537c-11.861-10.051-24.106-20.443-36.329-32.667l-15.077-15.056l-15.056,15.056   c-13.799,13.778-27.3,25.277-39.204,35.414c-33.391,28.408-62.246,52.961-62.246,100.79c0.045,12.781,2.204,25.467,6.389,37.543   c-44.934-34.504-71.16-88.026-70.891-144.679c-0.35-37.368,14.113-73.355,40.226-100.087c4.498,9.125,9.83,17.815,15.929,25.959   c9.103,12.284,24.636,17.983,39.524,14.502c15.135-3.37,26.902-15.278,30.09-30.452c8.917-48.944,28.202-95.413,56.56-136.289   c22.466,21.295,44.72,40.141,64.801,57.199c66.696,56.645,114.994,97.574,114.994,169.296   c0.106,55.877-25.749,108.633-69.976,142.784H366.759z"
+                        />
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="Center" Grid.Column="1" Margin="0, 7, 0, 0" Orientation="Vertical">
+                        <Label Text="Current Streak"
+                               TextColor="{StaticResource GrayLabel}"
+                               FontSize="10"
+                               Grid.Row="0"/>
+                        <Label TextColor="{StaticResource OxColorsBlack}"
+                               FontSize="12"
+                               Grid.Row="1">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding StreakCount}"/>
+                                    <Span Text=" Days"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+
+                
+                
+
+                </Grid>
+
+            </Grid>
+
+        </Frame>
+
+
+    </ContentView.Content>
+</ContentView>

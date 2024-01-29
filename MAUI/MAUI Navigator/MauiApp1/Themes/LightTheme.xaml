@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Themes.LightTheme">
+
+    <!-- NAVIGATION CATEGORIES COLORS -->
+    <Color x:Key="SampleColor">#00CED1</Color>
+    <Color x:Key="MigrationColor">#1E90FF</Color>
+    <Color x:Key="IssuesColor">#FF4500</Color>
+    <Color x:Key="TestColor">#98FB98</Color>
+
+    <!-- GENERAL COLORS -->
+    <Color x:Key="MainWrapperBackgroundColor">#FAFAFA</Color>
+    <Color x:Key="SimpleTextColor">#424242</Color>
+</ResourceDictionary>

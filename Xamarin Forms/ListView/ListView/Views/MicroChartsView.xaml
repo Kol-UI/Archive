@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" 
+    x:Class="ListView.Views.MicroChartsView"
+    Background="{StaticResource GradientScooter}"
+    Title="Folder Stats">
+    <ContentPage.Content>
+        <ScrollView>   
+        <StackLayout Orientation="Vertical"
+                     Padding="10,0,10,10">
+            
+            <Grid RowDefinitions="20, 400, 500, 75"
+                  ColumnDefinitions="2, Auto, 2">
+                
+                <Frame Grid.Row="1"
+                       Grid.Column="1"
+                       Style="{StaticResource StatsFrameStyle}">
+                    <StackLayout>
+                        <Label Text="Your stats on this folder:"
+                               FontSize="18"
+                               TextDecorations="Underline"
+                               TextColor="{StaticResource MainColor}"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"/>
+
+                        <forms:ChartView x:Name="DayliesChart1"
+                                         HeightRequest="300"/>
+
+                        <StackLayout Orientation="Horizontal">
+                        <Frame WidthRequest="145"
+                               HasShadow="True"
+                               CornerRadius="20"
+                               Margin="0,-30,0,0"
+                               HorizontalOptions="Start"
+                               VerticalOptions="CenterAndExpand"
+                               BorderColor="Transparent"
+                               BackgroundColor="{StaticResource MainColor}"
+                               Opacity="0.8">
+                            <Label Text="Studying"
+                                   FontSize="10"
+                                   TextColor="{StaticResource AppColorsWhite}"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="HowToStudyFrame" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                        <Frame WidthRequest="75"
+                               HasShadow="True"
+                               Margin="0,15,20,0"
+                               HorizontalOptions="EndAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                               BorderColor="Transparent"
+                               BackgroundColor="{StaticResource AppColorsYellow}">
+                            <Label Text="Buy FC"
+                                   FontSize="10"
+                                   TextColor="{StaticResource MainColor}"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"/>
+                        </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!--
+                       CornerRadius="30" HasShadow="False" Margin="0,0,0,0"
+                       HeightRequest="360" WidthRequest="400"
+                       Opacity="0.8"
+                       BorderColor="Transparent" BackgroundColor="WhiteSmoke" -->
+
+                <Frame Grid.Row="2"
+                       Grid.Column="1"
+                       Style="{StaticResource StatsFrameStyle}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HeightRequest="360">
+
+                    <StackLayout>
+                        <Label Text="Last sessions reviews:"
+                               FontSize="18"
+                               TextDecorations="Underline"
+                               TextColor="{StaticResource MainColor}"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"/>
+
+                        <forms:ChartView x:Name="WeekChart"
+                                         HeightRequest="300"/>
+
+                        <Frame WidthRequest="145"
+                               HasShadow="True"
+                               CornerRadius="20"
+                               Margin="0,-10,0,0"
+                               HorizontalOptions="Start"
+                               VerticalOptions="CenterAndExpand"
+                               Opacity="0.8"
+                               BorderColor="Transparent"
+                               BackgroundColor="{StaticResource MainColor}">
+                            <Label Text="Need more Tips ?"
+                                   FontSize="10"
+                                   TextColor="{StaticResource AppColorsWhite}"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MoreTipsFrame" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+
+
+                <Frame Grid.Row="3"
+                       Grid.Column="1"
+                       Opacity="0.8"
+                       CornerRadius="15"
+                       WidthRequest="200"
+                       HasShadow="True"
+                       BorderColor="Transparent"
+                       BackgroundColor="{StaticResource AppColorsRed}"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand">
+                    <Label Text="Your global stats"
+                           FontSize="16"
+                           TextColor="{StaticResource AppColorsWhite}"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GetGlobalStats"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+            </Grid>
+
+            <Label Padding="0,100,0,0"
+                   Text="Radial Gauge Chart:"
+                   FontSize="18"
+                   TextDecorations="Underline"
+                   TextColor="{StaticResource MainColor}"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+            <forms:ChartView x:Name="Chart1"
+                             HeightRequest="250"/>
+
+            <Label Text="Line Chart:"
+                   FontSize="18"
+                   TextDecorations="Underline"
+                   TextColor="{StaticResource MainColor}"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+            <forms:ChartView x:Name="Chart2"
+                             HeightRequest="250"/>
+
+
+            <Label Text="Donut Chart:"
+                   FontSize="18"
+                   TextDecorations="Underline"
+                   TextColor="{StaticResource MainColor}"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+            <forms:ChartView x:Name="Chart3"
+                             HeightRequest="250"/>
+
+            <Label Text="Bar Chart:" FontSize="18"
+                   TextDecorations="Underline"
+                   TextColor="{StaticResource MainColor}"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+            <forms:ChartView x:Name="Chart4"
+                             HeightRequest="250"/>
+
+            <Label Text="Point Chart:"
+                   FontSize="18"
+                   TextDecorations="Underline"
+                   TextColor="{StaticResource MainColor}"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+            <forms:ChartView x:Name="Chart5"
+                             HeightRequest="250"/>
+
+            <Label Text="Radar Chart:"
+                   FontSize="18"
+                   TextDecorations="Underline"
+                   TextColor="{StaticResource MainColor}"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+            <forms:ChartView x:Name="Chart6"
+                             HeightRequest="250"/>
+
+            <Label Text="Line Chart:"
+                   FontSize="18"
+                   TextDecorations="Underline"
+                   TextColor="{StaticResource MainColor}"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+            <forms:ChartView x:Name="Chart7"
+                             HeightRequest="250"/>
+
+            <Label Text="Other Radial Gauge Chart:"
+                   FontSize="18"
+                   TextDecorations="Underline"
+                   TextColor="{StaticResource MainColor}"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+            <forms:ChartView x:Name="Chart8"
+                             HeightRequest="400"/> 
+        </StackLayout>  
+    </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

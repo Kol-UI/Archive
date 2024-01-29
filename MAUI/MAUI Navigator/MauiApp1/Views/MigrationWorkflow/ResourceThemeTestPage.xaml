@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.MigrationWorkflow.ResourceThemeTestPage"
+             BackgroundColor="{DynamicResource MainWrapperBackgroundColor}"
+             Title="Resource Theme Test Page">
+    <VerticalStackLayout>
+        <Label 
+            Text="Colors from theme :"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Sample Color"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="{DynamicResource SampleColor}" />
+
+        <Label 
+            Text="Migration Color"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="{DynamicResource MigrationColor}" />
+
+        <Label 
+            Text="Issues Color"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="{DynamicResource IssuesColor}" />
+
+        <Label 
+            Text="Test Color"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="{DynamicResource TestColor}" />
+    </VerticalStackLayout>
+</ContentPage>

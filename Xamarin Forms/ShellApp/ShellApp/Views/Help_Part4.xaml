@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ShellApp.Views.Help_Part4"
+    Title="AIDE - REVISIONS">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#a5ebe9" Offset="0.3"/>
+            <GradientStop Color="#74dbd8" Offset="0.5"/>
+            <GradientStop Color="#08a4a7" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Margin="20">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#a5ebe9" Offset="0.3"/>
+                    <GradientStop Color="#74dbd8" Offset="0.5"/>
+                    <GradientStop Color="#08a4a7" Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <Frame Margin="0,10,0,10" Opacity="0.7">
+                <StackLayout>
+                <!-- Partie 4-->
+                <Label Text="Partie 4 : Réviser"
+                       Style="{StaticResource Help_Label_Title}"/>
+                <Label x:Name="article4_1"
+                       Text="4.1. FICHES : Comment suivre l'apprentissage ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_4_1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article4_2"
+                       Text="4.2. FICHES : Comment ajouter un statut d'avancement ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_4_2"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article4_3"
+                       Text="4.3 fc : Comment fonctionne les modes ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_4_3"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="article4_4"
+                       Text="4.4 fc : Comment fonctionne le nouveau mode ?"
+                       Style="{StaticResource Help_Label_Gesture}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Open_Article_4_4"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+

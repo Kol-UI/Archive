@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ListView.Views.TasksMenu"
+    BackgroundColor="#F0F0F3"
+    xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
+    xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+    Title="My Tasks">
+    <ContentPage.Content>
+        <Grid RowDefinitions="100, 100, *" ColumnDefinitions="*, *" ColumnSpacing="10" RowSpacing="20" Padding="50,20,50,20">
+            
+            <sh:Shadows CornerRadius="25" Grid.Row="0" Grid.Column="0">
+                <sh:Shadows.Shades>
+                <sh:ImmutableShades>
+                    <sh:Shade BlurRadius="10"
+                                  Opacity="1"
+                                  Offset="-8,-8"
+                                  Color="#FFFFFF" />
+                        <sh:Shade BlurRadius="7"
+                                  Opacity="1"
+                                  Offset="6, 6"
+                                  Color="#A3B1C6" />
+                </sh:ImmutableShades>
+            </sh:Shadows.Shades>
+            <Frame
+                x:Name="FrameStudying"
+                Grid.Row="0"
+                Grid.Column="0"
+                HasShadow="False"
+                BorderColor="Transparent"
+                BackgroundColor="{StaticResource AppColorsBrightOrange}"
+                CornerRadius="25">
+                <StackLayout
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Orientation="Vertical">
+                    <Label
+                        Text="Studying"
+                        FontSize="14"
+                        FontFamily="MetropolisRegularFont"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource AppColorsWhite}"/>
+                    <Label
+                        x:Name="StudyingPercent"
+                        FontFamily="MetropolisRegularFont"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource AppColorsWhite}"/>
+                </StackLayout>
+                <Frame.Behaviors>
+                    <xamanimation:EntranceTransition Duration="1000"/>
+                </Frame.Behaviors>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedStudying"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            </sh:Shadows>
+
+            <sh:Shadows CornerRadius="25" Grid.Row="0" Grid.Column="1">
+                <sh:Shadows.Shades>
+                <sh:ImmutableShades>
+                    <sh:Shade BlurRadius="10"
+                                  Opacity="1"
+                                  Offset="-8,-8"
+                                  Color="#FFFFFF" />
+                        <sh:Shade BlurRadius="7"
+                                  Opacity="1"
+                                  Offset="6, 6"
+                                  Color="#A3B1C6" />
+                </sh:ImmutableShades>
+            </sh:Shadows.Shades>
+            <Frame
+                x:Name="FrameScanning"
+                Grid.Row="0"
+                Grid.Column="1"
+                HasShadow="False"
+                BorderColor="Transparent"
+                BackgroundColor="{StaticResource AppColorsRed}"
+                CornerRadius="25">
+                <StackLayout
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Orientation="Vertical">
+                    <Label
+                        Text="Scanning"
+                        FontSize="14"
+                        FontFamily="MetropolisRegularFont"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource AppColorsWhite}"/>
+                    <Label
+                        x:Name="ScanningPercent"
+                        FontFamily="MetropolisRegularFont"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource AppColorsWhite}"/>
+                </StackLayout>
+                <Frame.Behaviors>
+                    <xamanimation:EntranceTransition Duration="1000"/>
+                </Frame.Behaviors>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedScanning"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            </sh:Shadows>
+
+
+            <sh:Shadows CornerRadius="25" Grid.Row="1" Grid.Column="0">
+                <sh:Shadows.Shades>
+                <sh:ImmutableShades>
+                    <sh:Shade BlurRadius="10"
+                                  Opacity="1"
+                                  Offset="-8,-8"
+                                  Color="#FFFFFF" />
+                        <sh:Shade BlurRadius="7"
+                                  Opacity="1"
+                                  Offset="6, 6"
+                                  Color="#A3B1C6" />
+                </sh:ImmutableShades>
+            </sh:Shadows.Shades>
+            <Frame
+                x:Name="FrameAccount"
+                Grid.Row="1"
+                Grid.Column="0"
+                HasShadow="False"
+                BorderColor="Transparent"
+                BackgroundColor="{StaticResource AppColorsBlue}"
+                CornerRadius="25">
+                <StackLayout
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Orientation="Vertical">
+                    <Label
+                        Text="Account"
+                        FontSize="14"
+                        FontFamily="MetropolisRegularFont"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource AppColorsWhite}"/>
+                    <Label
+                        x:Name="AccountPercent"
+                        FontFamily="MetropolisRegularFont"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource AppColorsWhite}"/>
+                </StackLayout>
+                <Frame.Behaviors>
+                    <xamanimation:EntranceTransition Duration="1000"/>
+                </Frame.Behaviors>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedAccount"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            </sh:Shadows>
+
+            <sh:Shadows CornerRadius="25" Grid.Row="1" Grid.Column="1">
+                <sh:Shadows.Shades>
+                <sh:ImmutableShades>
+                    <sh:Shade BlurRadius="10"
+                                  Opacity="1"
+                                  Offset="-8,-8"
+                                  Color="#FFFFFF" />
+                        <sh:Shade BlurRadius="7"
+                                  Opacity="1"
+                                  Offset="6, 6"
+                                  Color="#A3B1C6" />
+                </sh:ImmutableShades>
+            </sh:Shadows.Shades>
+            <Frame
+                x:Name="FrameFolderSharing"
+                Grid.Row="1"
+                Grid.Column="1"
+                HasShadow="False"
+                BorderColor="Transparent"
+                BackgroundColor="{StaticResource AppColorsGreen}"
+                CornerRadius="25">
+                <StackLayout
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Orientation="Vertical">
+                    <Label
+                        Text="Folder - Sharing"
+                        LineBreakMode="NoWrap"
+                        FontSize="14"
+                        FontFamily="MetropolisRegularFont"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource AppColorsWhite}"/>
+                    <Label
+                        x:Name="FolderSharingPercent"
+                        FontFamily="MetropolisRegularFont"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource AppColorsWhite}"/>
+                </StackLayout>
+                <Frame.Behaviors>
+                    <xamanimation:EntranceTransition Duration="1000"/>
+                </Frame.Behaviors>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedFolderSharing"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            </sh:Shadows>
+
+
+
+
+                <ListView
+                    x:Name="ScrollList"
+                    Opacity="0.8"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    IsVisible="False"
+                    HasUnevenRows="False"
+                    SelectionMode="None"
+                    SeparatorVisibility="None"
+                    RowHeight="75"
+                    VerticalScrollBarVisibility="Never"
+                    BackgroundColor="Transparent">
+                    <ListView.ItemTemplate>
+                      <DataTemplate>
+                        <ViewCell
+                            IsEnabled="false">
+                            <StackLayout>
+                                <Frame
+                                    x:Name="FrameInsideList"
+                                    HasShadow="False"
+                                    HeightRequest="35"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="{Binding AchColor}">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label
+                                            x:Name="TextAchievement"
+                                            TextColor="{Binding AchColor}"
+                                            Text="{Binding Text}"
+                                            HorizontalOptions="StartAndExpand"
+                                            VerticalOptions="StartAndExpand"
+                                            LineBreakMode="WordWrap"
+                                            FontSize="14"
+                                            FontFamily="MetropolisRegularFont"/>
+                                        <CheckBox
+                                            x:Name="CheckBoxAchievement"
+                                            Margin="20,3,3,3"
+                                            Color="{Binding AchColor}"
+                                            IsChecked="{Binding Check}"
+                                            IsEnabled="False"
+                                            VerticalOptions="CenterAndExpand"
+                                            HorizontalOptions="EndAndExpand"/>
+                                    </StackLayout>
+                                    <Frame.Behaviors>
+                                        <xamanimation:EntranceTransition Duration="300"/>
+                                    </Frame.Behaviors>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                      </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

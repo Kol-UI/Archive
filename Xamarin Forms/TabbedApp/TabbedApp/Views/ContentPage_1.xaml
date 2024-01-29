@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TabbedApp.Views.ContentPage_1"
+    Title="SC">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Button Classiques -->
+            <Style TargetType="Button" x:Key="exampleKey">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="DarkSlateGray"/>
+                <Setter Property="BackgroundColor" Value="#a5ebe9"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="BorderColor" Value="#a5ebe9"/>
+                <Setter Property="WidthRequest" Value="125"/>
+                <Setter Property="HeightRequest" Value="150"/>
+                <Setter Property="ContentLayout" Value="Top,0"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList x:Name="CommonStates">
+                        <VisualStateGroup>
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Black"/>
+                                    <Setter Property="Scale" Value="0.95"/>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="LightGray"/>
+                                    <Setter Property="BorderColor" Value="LightGray"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <!-- Button Test Disable -->
+            <Style TargetType="Button" x:Key="exampleKey2">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="DarkSlateGray"/>
+                <Setter Property="BackgroundColor" Value="#a5ebe9"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="BorderColor" Value="#a5ebe9"/>
+                <Setter Property="WidthRequest" Value="125"/>
+                <Setter Property="HeightRequest" Value="150"/>
+                <Setter Property="ContentLayout" Value="Top,0"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList x:Name="CommonStates">
+                        <VisualStateGroup>
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Black"/>
+                                    <Setter Property="Scale" Value="0.95"/>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="LightGray"/>
+                                    <Setter Property="BorderColor" Value="LightGray"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+                <Style.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding Source={x:Reference switchButton}, Path=IsToggled}"
+                                 Value="True">
+                        <Setter Property="TextColor" Value="DarkSlateGray"/>
+                        <Setter Property="BackgroundColor" Value="LightGray"/>
+                        <Setter Property="BorderColor" Value="LightGray"/>
+                        <Setter Property="IsEnabled" Value="True"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+   <ContentPage.Content>
+        <ScrollView>
+          <StackLayout>
+            <Grid RowSpacing="5" ColumnSpacing="5" Padding="10,10,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" x:Name="col1"/>
+                <ColumnDefinition Width="*" x:Name="col2"/>
+                <ColumnDefinition Width="*" x:Name="col3"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <!-- Title 1 -->
+                <RowDefinition Height="20" x:Name="row1"/>
+                <RowDefinition Height="75" x:Name="row2"/>
+                <!-- Title 2 -->
+                <RowDefinition Height="20" x:Name="row3"/>
+                <RowDefinition Height="75" x:Name="row4"/>
+                <RowDefinition Height="75" x:Name="row5"/>
+                <!-- Title 3 -->
+                <RowDefinition Height="20" x:Name="row6"/>
+                <RowDefinition Height="75" x:Name="row7"/>
+                <!-- Title 4 -->
+                <RowDefinition Height="20" x:Name="row8"/>
+                <RowDefinition Height="75" x:Name="row9"/>
+                <!-- Title 5 -->
+                <RowDefinition Height="20" x:Name="row10"/>
+                <RowDefinition Height="75" x:Name="row11"/>
+                <RowDefinition Height="75" x:Name="row12"/>
+            </Grid.RowDefinitions>
+                <!-- Ligne 1 Titre 1 -->
+                <Label Grid.Row="0" Grid.Column="1" Text="Scan" HorizontalOptions="CenterAndExpand" TextColor="#210f86" FontSize="18"/>
+
+                <!-- Ligne 2 -->
+                <!-- Button des Scans -->
+                <Button Grid.Row="1" Grid.Column="0" Text="Scan" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_note_add_black_36dp.png"/>
+
+                <!-- Button des scans En cours -->
+                <Button Grid.Row="1" Grid.Column="1" Text="En cours" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_youtube_searched_for_black_36dp.png"/>
+
+                <!-- Button de la Recherche -->
+                 <Button Grid.Row="1" Grid.Column="2" Text="Recherche" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_search_black_36dp.png"/>
+
+                <!-- Ligne 3 Titre 2 -->
+                <!-- Documents -->
+                <Label Grid.Row="2" Grid.Column="1" Text="Documents" HorizontalOptions="Center" TextColor="#210f86" FontSize="18"/>
+
+                <!-- Ligne 4 -->
+                <!-- Button des Favoris -->
+                <Button Grid.Row="3" Grid.Column="0" Text="Favoris" Style="{StaticResource exampleKey2}"
+                        ImageSource="outline_grade_black_36dp.png"/>
+
+                <!-- Button des Notes -->
+                <Button Grid.Row="3" Grid.Column="1" Text="Notes" Style="{StaticResource exampleKey2}"
+                        ImageSource="outline_article_black_36dp.png"/>
+
+                <!-- Button des Fiches -->
+                 <Button Grid.Row="3" Grid.Column="2" Text="Fiches" Style="{StaticResource exampleKey2}"
+                        ImageSource="outline_aspect_ratio_black_36dp.png"/>
+
+                <!-- Ligne 5 -->
+                <!-- Button des Cartes -->
+                <Button Grid.Row="4" Grid.Column="0" Text="Cartes" Style="{StaticResource exampleKey2}"
+                        ImageSource="outline_rule_folder_black_36dp.png"/>
+
+                <!-- Button des Memos -->
+                <Button Grid.Row="4" Grid.Column="1" Text="Memos" Style="{StaticResource exampleKey2}"
+                        ImageSource="outline_sticky_note_2_black_36dp.png"/>
+
+                <!-- Button des Agendas -->
+                <Button Grid.Row="4" Grid.Column="2" Text="Agendas" Style="{StaticResource exampleKey2}"
+                        ImageSource="outline_fact_check_black_36dp.png"/>
+
+                <!-- Ligne 6 Titre 3 -->
+                <!-- Profile et Partage -->
+                <Label Grid.Row="5" Grid.ColumnSpan="3" Text="Profile et Partage" HorizontalOptions="Center" TextColor="#210f86" FontSize="18"/>
+
+                <!-- Ligne 7 -->
+                <!-- Button du Profile -->
+                <Button Grid.Row="6" Grid.Column="0" Text="Profile" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_account_circle_black_36dp.png"/>
+
+                <!-- Button du Calendrier -->
+                <Button Grid.Row="6" Grid.Column="1" Text="Calendrier" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_calendar_today_black_36dp.png"/>
+
+                <!-- Button du Partage -->
+                <Button Grid.Row="6" Grid.Column="2" Text="Partage" Style="{StaticResource exampleKey2}"
+                        ImageSource="baseline_ios_share_black_36dp.png"/>
+
+                <!-- Ligne 8 Titre 4 -->
+                <!-- Historique -->
+                <Label Grid.Row="7" Grid.Column="1" Text="Historique" HorizontalOptions="Center" TextColor="#210f86" FontSize="18"/>
+
+                <!-- Ligne 9 -->
+                <!-- Button Button des Scans Récents -->
+                <Button Grid.Row="8" Grid.Column="0" Text="Récents" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_history_black_36dp.png"/>
+
+                <!-- Button du Journal de Bord -->
+                <Button Grid.Row="8" Grid.Column="1" Text="Journal" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_account_balance_wallet_black_36dp.png"/>
+
+                <!-- Button de la Corbeille -->
+                <Button Grid.Row="8" Grid.Column="2" Text="Corbeille" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_delete_black_36dp.png"/>
+
+                <!-- Ligne 10 Titre 4 -->
+                <!-- Autre -->
+                <Label Grid.Row="9" Grid.Column="1" Text="Autres" HorizontalOptions="CenterAndExpand" TextColor="#210f86" FontSize="18"/>
+
+                <!-- Ligne 11 -->
+                <!-- Button des Actualités -->
+                <Button Grid.Row="10" Grid.Column="0" Text="Actualités" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_notifications_black_36dp.png"/>
+
+                <!-- Button des Alertes -->
+                <Button Grid.Row="10" Grid.Column="1" Text="Alertes" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_info_black_36dp.png"/>
+
+                <!-- Button de l'aide et de la FAQ -->
+                <Button Grid.Row="10" Grid.Column="2" Text="Aide/FAQ" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_help_outline_black_36dp.png"/>
+
+                <!-- Ligne 12 -->
+                <!-- Button des Options -->
+                <Button Grid.Row="11" Grid.Column="0" Text="Options" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_settings_black_36dp.png"/>
+
+                <!-- Button de la Boutique -->
+                <Button Grid.Row="11" Grid.Column="1" Text="Boutique" Style="{StaticResource exampleKey}"
+                        ImageSource="outline_shopping_cart_black_36dp.png"/>
+
+                
+            </Grid>
+            <!-- Fin de Grid -->
+
+            <!-- Informations Supplémentaires -->
+
+            <StackLayout Padding="10,0" IsVisible="True">
+                <BoxView Color="Black" WidthRequest ="100" HeightRequest="1"/>
+                <Label Grid.Row="12" Grid.ColumnSpan="2" Text="Informations Supplémentaires" HorizontalOptions="StartAndExpand" TextColor="#210f86" FontSize="18" IsVisible="False">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source={x:Reference switchButton}, Path=IsToggled}"
+                                 Value="True">
+                        <Setter Property="IsVisible" Value="True"/>
+                    </DataTrigger>
+                </Label.Triggers>
+                </Label>
+                <Label Text="Si l'une de vos tuiles est grisée et non-disponible, cela signifie que vous n'avez pas encore scanner le type de produit en question"
+                       VerticalOptions="Center" TextColor="Black" IsVisible="False">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source={x:Reference switchButton}, Path=IsToggled}"
+                                 Value="True">
+                        <Setter Property="IsVisible" Value="True"/>
+                    </DataTrigger>
+                </Label.Triggers>
+                </Label>
+
+                <BoxView Color="#a5ebe9" CornerRadius="10" WidthRequest="300"
+                         HeightRequest="275" VerticalOptions="Center" HorizontalOptions="Center">
+
+                </BoxView>
+                <BoxView Color="Black" WidthRequest ="100" HeightRequest="1"/>
+                <Layout.Triggers>
+                    <DataTrigger TargetType="Layout"
+                                 Binding="{Binding Source={x:Reference switchButton}, Path=IsToggled}"
+                                 Value="True">
+                        <Setter Property="IsVisible" Value="True"/>
+                    </DataTrigger>
+                </Layout.Triggers>
+            </StackLayout>
+
+            
+
+            <!-- Switch Button Locked/Unlocked -->
+            <StackLayout Padding="10,0">
+              <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                <Label Text="Version Locked: " VerticalOptions="Center" TextColor="Black">
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label"
+                                        Binding="{Binding Source={x:Reference switchButton}, Path=IsToggled}"
+                                        Value="True">
+                        <Setter Property="TextColor" Value="Red"/>
+                        <Setter Property="Text" Value="Version Unlocked"/>
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+                <Switch VerticalOptions="Center" x:Name="switchButton" OnColor="Red"/>
+                </StackLayout>
+            </StackLayout>
+
+              
+
+            <!-- Fin Layout -->
+          </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

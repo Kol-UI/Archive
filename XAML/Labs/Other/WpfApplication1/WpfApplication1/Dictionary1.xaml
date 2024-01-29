@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApplication1">
+
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="Template" Value="{DynamicResource MyTemplate}"></Setter>
+    </Style>
+    <ControlTemplate x:Key="MyTemplate" TargetType="{x:Type Button}">
+        <Grid>
+            <Ellipse Fill="Red"  Stroke="DarkRed" Name="MyEllipse" StrokeThickness="3"/>
+            <ContentPresenter 
+                HorizontalAlignment="Center" 	VerticalAlignment="Center">
+            </ContentPresenter>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

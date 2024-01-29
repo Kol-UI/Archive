@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ListView.Views.XamanimationViews"
+    xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <BoxView x:Name="FadeBox"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     HeightRequest="120"
+                     WidthRequest="120"
+                     Color="Blue"/>
+            <BoxView x:Name="AnimationBox"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     HeightRequest="120"
+                     WidthRequest="120"
+                     Color="Red" />
+            <BoxView x:Name="FadeBox2"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     HeightRequest="120"
+                     WidthRequest="120"
+                     Color="Green"/>
+            <BoxView x:Name="FadeBox3"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     HeightRequest="120"
+                     WidthRequest="120"
+                     Color="Yellow"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="ButtonXamanimation"
+                    Text="FadeOut"
+                    BackgroundColor="Cyan"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="Button_Clicked"/>
+                <Button x:Name="ButtonXamanimation2"
+                    Text="FadeIn"
+                    BackgroundColor="Cyan"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="Button_Clicked2"/>
+            </StackLayout>
+
+            <BoxView x:Name="BoxViewAnimate"
+                   BackgroundColor="IndianRed"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            
+
+            <Button x:Name="ButtonXamanimationNextView"
+                    Text="Next View"
+                    BackgroundColor="GhostWhite"
+                    HeightRequest="150"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="Button_Clicked3"/>
+
+
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.TestWorkflow.LocalHtmlTestPage"
+             Title="LocalHtmlTestPage">
+    <VerticalStackLayout>
+        <WebView>
+            <WebView.Source>
+                <HtmlWebViewSource>
+                    <HtmlWebViewSource.Html>
+                        <![CDATA[
+                        <HTML>
+                        <BODY>
+                        <H1>.NET MAUI</H1>
+                        </BODY>
+                        </HTML>
+                        ]]>
+                    </HtmlWebViewSource.Html>
+                </HtmlWebViewSource>
+            </WebView.Source>
+        </WebView>
+    </VerticalStackLayout>
+</ContentPage>

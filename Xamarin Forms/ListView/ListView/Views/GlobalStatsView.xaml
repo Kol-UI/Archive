@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    x:Class="ListView.Views.GlobalStatsView"
+    Background="{StaticResource GradientScooter}"
+    Title="All Your Stats">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Padding="10,0,10,10">
+                <Grid RowDefinitions="5, 400, 400, 405, 405, 405, 405, 460" ColumnDefinitions="2, Auto, 2">
+
+                    <Frame Grid.Row="1" Grid.Column="1"
+                           Style="{StaticResource StatsFrameStyle}">
+                        <StackLayout>
+                            <Label Text="Folder and Scans counters:" FontSize="18" TextDecorations="Underline"
+                               TextColor="{StaticResource MainColor}"
+                               HorizontalOptions="Start" VerticalOptions="Start"/>
+                            <forms:ChartView x:Name="FirstChart" HeightRequest="350" Margin="0,8,0,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="2" Grid.Column="1"
+                           Style="{StaticResource StatsFrameStyle}">
+                        <StackLayout>
+                            <Label Text="Scans by document types:" FontSize="18" TextDecorations="Underline"
+                               TextColor="{StaticResource MainColor}"
+                               HorizontalOptions="Start" VerticalOptions="Start"/>
+                            <forms:ChartView x:Name="TypeChart" HeightRequest="310" Margin="0,8,0,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="3" Grid.Column="1"
+                           Style="{StaticResource StatsFrameStyle}">
+                        <StackLayout>
+                            <Label Text="This week studies:" FontSize="18" TextDecorations="Underline"
+                                   TextColor="{StaticResource MainColor}"
+                                   HorizontalOptions="Start" VerticalOptions="Start"/>
+                            <forms:ChartView x:Name="ThisWeekStudiesChart" HeightRequest="350" Margin="0,8,0,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="4" Grid.Column="1"
+                           Style="{StaticResource StatsFrameStyle}">
+                        <StackLayout>
+                            <Label Text="All recent studies:" FontSize="18" TextDecorations="Underline"
+                                   TextColor="{StaticResource MainColor}"
+                                   HorizontalOptions="Start" VerticalOptions="Start"/>
+                            <forms:ChartView x:Name="LastStudiesChart" HeightRequest="350" Margin="0,8,0,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="5" Grid.Column="1"
+                           Style="{StaticResource StatsFrameStyle}">
+                        <StackLayout>
+                            <Label Text="Global year studies:" FontSize="18" TextDecorations="Underline"
+                                   TextColor="{StaticResource MainColor}"
+                                   HorizontalOptions="Start" VerticalOptions="Start"/>
+                            <forms:ChartView x:Name="GlobalYearStudiesChart" HeightRequest="350" Margin="0,8,0,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="6" Grid.Column="1"
+                           Style="{StaticResource StatsFrameStyle}">
+                        <StackLayout>
+                            <Label Text="Personnal color folder popularity:" FontSize="18" TextDecorations="Underline"
+                                   TextColor="{StaticResource MainColor}"
+                                   HorizontalOptions="Start" VerticalOptions="Start"/>
+                            <forms:ChartView x:Name="ColorPopularityChart" HeightRequest="350" Margin="0,8,0,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="7" Grid.Column="1"
+                           Style="{StaticResource StatsFrameStyle}">
+                        <StackLayout>
+                            <Label Text="Tasks:" FontSize="18" TextDecorations="Underline"
+                                   TextColor="{StaticResource MainColor}"
+                                   HorizontalOptions="Start" VerticalOptions="Start"/>
+                            <forms:ChartView x:Name="TasksChart" HeightRequest="350" Margin="0,8,0,0"/>
+
+                            <Grid RowDefinitions="Auto" ColumnDefinitions="*,*">
+                                <Frame Grid.Column="0" Grid.Row="0" WidthRequest="100" HasShadow="True" CornerRadius="20" Margin="0,-10,0,0"
+                                   HorizontalOptions="Start" VerticalOptions="CenterAndExpand"
+                                   BorderColor="Transparent" BackgroundColor="{StaticResource MainColor}"
+                                   Opacity="0.8" Padding="15">
+                                    <Label Text="Online tutorials" FontSize="12"
+                                           TextColor="{StaticResource AppColorsWhite}"
+                                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer />
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+
+                                <Frame Grid.Column="1" Grid.Row="0" WidthRequest="100" HasShadow="True" CornerRadius="20" Margin="0,-10,0,0"
+                                   HorizontalOptions="End" VerticalOptions="CenterAndExpand"
+                                   BorderColor="Transparent" BackgroundColor="{StaticResource MainColor}"
+                                   Opacity="0.8" Padding="15">
+                                    <Label Text="Check my tasks" FontSize="12"
+                                           TextColor="{StaticResource AppColorsWhite}"
+                                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer />
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+
+                </Grid>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShapesApp.App"
+             xmlns:pckView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <Application.Resources>
+
+
+
+        <Style x:Key="GradientFrame" TargetType="Frame">
+            <Setter Property="Margin" Value="40, 0, 40, 0"/>
+            <Setter Property="HeightRequest" Value="10"/>
+            <Setter Property="HasShadow" Value="False"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Red" Offset="0.2"/>
+                        <GradientStop Color="OrangeRed" Offset="0.3"/>
+                        <GradientStop Color="DarkOrange" Offset="0.4"/>
+                        <GradientStop Color="Orange" Offset="0.5"/>
+                        <GradientStop Color="Yellow" Offset="0.6"/>
+                        <GradientStop Color="YellowGreen" Offset="0.7"/>
+                        <GradientStop Color="Green" Offset="0.9"/>
+                        <GradientStop Color="Blue" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+
+        <!-- Colors -->
+        <Color x:Key="MainColor">#28008C</Color>
+
+        <Color x:Key="OxColorsBlack">#615D59</Color>
+        <Color x:Key="OxColorsWhite">#FFFFFF</Color>
+        <Color x:Key="OxColorsLilac">#D0B7D5</Color>
+        <Color x:Key="OxColorsViolet">#A288D9</Color>
+        <Color x:Key="OxColorsPurple">#BF53B6</Color>
+        <Color x:Key="OxColorsPink">#EA60A7</Color>
+        <Color x:Key="OxColorsStrawberry">#FF8B9A</Color>
+        <Color x:Key="OxColorsRed">#F95E62</Color>
+        <Color x:Key="OxColorsBrightOrange">#FF883E</Color>
+        <Color x:Key="OxColorsYellow">#FFF166</Color>
+        <Color x:Key="OxColorsGreen">#73C92D</Color>
+        <Color x:Key="OxColorsIceMint">#00CFBB</Color>
+        <Color x:Key="OxColorsBlueTurquoise">#4CB4E7</Color>
+        <Color x:Key="OxColorsBlue">#0074A2</Color>
+
+        <Color x:Key="NavigationBarGray">#CFCFCF</Color>
+        <Color x:Key="BackgroundGray">#ECECEC</Color>
+        <Color x:Key="TileBackground">#FFFFFF</Color>
+        <Color x:Key="BottomIndicationBannerBackground">#827F8B</Color>
+        <Color x:Key="HomeViewBackgroundColor">#05D1CB</Color>
+        <Color x:Key="HomeCellBackgroundColor">#82E2E0</Color>
+        <Color x:Key="FolderColor">#FFDEA4</Color>
+        <Color x:Key="OnBoardingProColor">#CBDCDD</Color>
+        <Color x:Key="ScNavyBlue">#001478</Color>
+        <Color x:Key="ScLightBlue">#B3BCDA</Color>
+        <Color x:Key="ScRedTint">#FF3C00</Color>
+        <Color x:Key="ScGray">#82808C</Color>
+        <Color x:Key="ScLimeGreen">#32CD32</Color>
+        <Color x:Key="ScDodgerBlue">#1E90FF</Color>
+        <Color x:Key="ScCoralRed">#FF7F50</Color>
+        <Color x:Key="ScBlueCyan">#05D1CB</Color>
+        <Color x:Key="RevisionGreen">#9CCD07</Color>
+        <Color x:Key="RevisionOrange">#FFBB33</Color>
+        <Color x:Key="RevisionRed">#FF4444</Color>
+        <Color x:Key="RevisionGray">#E6E5E8</Color>
+        
+
+        <Color x:Key="ButtonColor">#EDEEFF</Color>
+        <Color x:Key="LightShadow">#FFFFFF</Color>
+        <Color x:Key="DarkShadow">#A3B1C6</Color>
+        <Color x:Key="GrayLabel">#6F7D90</Color>
+        <Color x:Key="WhiteBackground">#F0F0F3</Color>
+        <Color x:Key="LightMainColor">#5D2FB9</Color>
+        <Color x:Key="LightMainColorForGradient">#8D59E8</Color>
+        <Color x:Key="ModernGray">#989898</Color>
+        <Color x:Key="BaseLightTextColor">#9E9E9E</Color>
+
+        <Color x:Key="WhiteGrayBackground">#F8F8F8</Color>
+
+        <Color x:Key="StartGradientColor">#6D59A1</Color>
+        <Color x:Key="EndGradientColor">#2F098E</Color>
+
+
+        
+        <!-- Graph Style -->
+        <Style x:Key="GraphFrame" TargetType="Frame">
+            <Setter Property="Padding" Value="0, 2, 0, 0"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="HasShadow" Value="True"/>
+            <Setter Property="Margin" Value="0, 10, 15, 10"/>
+            <Setter Property="HeightRequest" Value="300"/>
+            <Setter Property="WidthRequest" Value="325"/>
+            <Setter Property="CornerRadius" Value="10"/>
+        </Style>
+
+        <Style x:Key="FirstGraphFrame" TargetType="Frame" BasedOn="{StaticResource GraphFrame}">
+            <Setter Property="Margin" Value="15, 10, 15, 10"/>
+        </Style>
+
+        <!-- Default GraphBoxView -->
+        <Style x:Key="GraphBoxView" TargetType="BoxView">
+            <Setter Property="HeightRequest" Value="275"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource ScLightBlue}"/>
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            <Setter Property="VerticalOptions" Value="End"/>
+            <Setter Property="WidthRequest" Value="25"/>
+            <Setter Property="Margin" Value="5, 0, 5, 0"/>
+        </Style>
+
+        <!-- Default Label Value Graph -->
+        <Style x:Key="LabelValueGraphDefault" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="TextColor" Value="{StaticResource MainColor}"/>
+        </Style>
+
+
+
+
+
+        <Style x:Key="GraphStack" TargetType="StackLayout">
+            <Setter Property="Margin" Value="5, 0, 0, 0"/>
+            <Setter Property="VerticalOptions" Value="End"/>
+        </Style>
+
+
+        
+
+
+
+        <!-- Top Welcome Frame Gradient -->
+        <Style x:Key="GradientTopFrame" TargetType="Frame">
+            <Setter Property="Padding" Value="18"/>
+            <Setter Property="CornerRadius" Value="35"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="{StaticResource StartGradientColor}" Offset="0"/>
+                        <GradientStop Color="{StaticResource EndGradientColor}" Offset=".65"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <!-- Frame (Button) for Week Selection -->
+        <Style x:Key="WeekSelection" TargetType="Frame">
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="HeightRequest" Value="35"/>
+            <Setter Property="WidthRequest" Value="80"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="IsClippedToBounds" Value="True"/>
+            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="{StaticResource StartGradientColor}" Offset="0"/>
+                        <GradientStop Color="{StaticResource EndGradientColor}" Offset=".65"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <!-- Title Style -->
+        <Style x:Key="TitleStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="Title"/>
+            <Setter Property="Padding" Value="30, 10, 30, 10"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+
+
+        <!-- Frame pckView -->
+        <Style x:Key="pckViewStyle" TargetType="pckView:PancakeView">
+            <Setter Property="CornerRadius" Value="10, 10, 10, 10"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="Margin" Value="10, 10, 10, 15"/>
+            <Setter Property="Padding" Value="15, 10, 25, 10"/>
+            <Setter Property="Border">
+                <Setter.Value>
+                    <pckView:BorderMarkup Color="LightGray" Thickness="1"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Shadow">
+                <Setter.Value>
+                    <pckView:ShadowMarkup Color="Black" Offset="3,3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Path (SVG) -->
+        <Style x:Key="PathSVGStyle" TargetType="Path">
+            <Setter Property="Fill" Value="#DCDCDC"/>
+            <Setter Property="Aspect" Value="Uniform"/>
+        </Style>
+
+        <!-- Description Label -->
+        <Style x:Key="DescriptionLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+
+        <Style x:Key="ValueLabelStats" TargetType="Label" BasedOn="{StaticResource DescriptionLabel}">
+            <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+
+
+        <!-- Frame Gradients -->
+        <Style x:Key="FramesStyleProgressColor" TargetType="Frame">
+            <Setter Property="HasShadow" Value="True"/>
+            <Setter Property="Margin" Value="5, 15, 5, 15"/>
+            <Setter Property="HeightRequest" Value="10"/>
+            <Setter Property="WidthRequest" Value="50"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <Style x:Key="FrameGreenGradient" TargetType="Frame" BasedOn="{StaticResource FramesStyleProgressColor}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="{StaticResource OxColorsWhite}" Offset="0.1" />
+                        <GradientStop Color="{StaticResource OxColorsGreen}" Offset="0.2" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="FrameYellowGradient" TargetType="Frame" BasedOn="{StaticResource FramesStyleProgressColor}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="{StaticResource OxColorsWhite}" Offset="0.1" />
+                        <GradientStop Color="Yellow" Offset="0.2" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="FrameOrangeGradient" TargetType="Frame" BasedOn="{StaticResource FramesStyleProgressColor}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="{StaticResource OxColorsWhite}" Offset="0.1" />
+                        <GradientStop Color="{StaticResource OxColorsBrightOrange}" Offset="0.2" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="FrameRedGradient" TargetType="Frame" BasedOn="{StaticResource FramesStyleProgressColor}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="{StaticResource OxColorsWhite}" Offset="0.1" />
+                        <GradientStop Color="{StaticResource OxColorsRed}" Offset="0.2" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="FrameVioletGradient" TargetType="Frame" BasedOn="{StaticResource FramesStyleProgressColor}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="{StaticResource OxColorsWhite}" Offset="0.1" />
+                        <GradientStop Color="#B8A2F9" Offset="0.2" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+
+        <!-- Sessions Value 0 -->
+        <Style x:Key="GraphBoxViewValue0" TargetType="BoxView" BasedOn="{StaticResource GraphBoxView}">
+            <Setter Property="HeightRequest" Value="0"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource OxColorsBlack}"/>
+        </Style>
+        <Style x:Key="LabelValue0" TargetType="Label" BasedOn="{StaticResource LabelValueGraphDefault}">
+            <Setter Property="TextColor" Value="{StaticResource OxColorsBlack}"/>
+        </Style>
+
+        <!-- Sessions Value 1 -->
+        <Style x:Key="GraphBoxViewValue1" TargetType="BoxView" BasedOn="{StaticResource GraphBoxView}">
+            <Setter Property="HeightRequest" Value="30"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource OxColorsRed}"/>
+        </Style>
+        <Style x:Key="LabelValue1" TargetType="Label" BasedOn="{StaticResource LabelValueGraphDefault}">
+            <Setter Property="TextColor" Value="{StaticResource OxColorsRed}"/>
+        </Style>
+
+        <!-- Sessions Value 2 -->
+        <Style x:Key="GraphBoxViewValue2" TargetType="BoxView" BasedOn="{StaticResource GraphBoxView}">
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource OxColorsBrightOrange}"/>
+        </Style>
+        <Style x:Key="LabelValue2" TargetType="Label" BasedOn="{StaticResource LabelValueGraphDefault}">
+            <Setter Property="TextColor" Value="{StaticResource OxColorsBrightOrange}"/>
+        </Style>
+
+        <!-- Sessions Value 3 -->
+        <Style x:Key="GraphBoxViewValue3" TargetType="BoxView" BasedOn="{StaticResource GraphBoxView}">
+            <Setter Property="HeightRequest" Value="90"/>
+            <Setter Property="BackgroundColor" Value="DarkOrange"/>
+        </Style>
+        <Style x:Key="LabelValue3" TargetType="Label" BasedOn="{StaticResource LabelValueGraphDefault}">
+            <Setter Property="TextColor" Value="DarkOrange"/>
+        </Style>
+
+        <!-- Sessions Value 4 -->
+        <Style x:Key="GraphBoxViewValue4" TargetType="BoxView" BasedOn="{StaticResource GraphBoxView}">
+            <Setter Property="HeightRequest" Value="120"/>
+            <Setter Property="BackgroundColor" Value="YellowGreen"/>
+        </Style>
+        <Style x:Key="LabelValue4" TargetType="Label" BasedOn="{StaticResource LabelValueGraphDefault}">
+            <Setter Property="TextColor" Value="YellowGreen"/>
+        </Style>
+
+        <!-- Sessions Value 5 -->
+        <Style x:Key="GraphBoxViewValue5" TargetType="BoxView" BasedOn="{StaticResource GraphBoxView}">
+            <Setter Property="HeightRequest" Value="150"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource OxColorsGreen}"/>
+        </Style>
+        <Style x:Key="LabelValue5To9" TargetType="Label" BasedOn="{StaticResource LabelValueGraphDefault}">
+            <Setter Property="TextColor" Value="{StaticResource OxColorsGreen}"/>
+        </Style>
+
+        <!-- Sessions Value 6 -->
+        <Style x:Key="GraphBoxViewValue6" TargetType="BoxView" BasedOn="{StaticResource GraphBoxViewValue5}">
+            <Setter Property="HeightRequest" Value="180"/>
+        </Style>
+
+        <!-- Sessions Value 7 -->
+        <Style x:Key="GraphBoxViewValue7" TargetType="BoxView" BasedOn="{StaticResource GraphBoxViewValue5}">
+            <Setter Property="HeightRequest" Value="210"/>
+        </Style>
+        <!-- Sessions Value 8 -->
+        <Style x:Key="GraphBoxViewValue8" TargetType="BoxView" BasedOn="{StaticResource GraphBoxViewValue5}">
+            <Setter Property="HeightRequest" Value="240"/>
+        </Style>
+        <!-- Sessions Value 9 -->
+        <Style x:Key="GraphBoxViewValue9" TargetType="BoxView" BasedOn="{StaticResource GraphBoxView}">
+            <Setter Property="HeightRequest" Value="275"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource OxColorsGreen}"/>
+        </Style>
+        <!-- Sessions Value +10 (Used are by default because of possibilities) -->
+        <Style x:Key="GraphBoxViewValue10" TargetType="BoxView" BasedOn="{StaticResource GraphBoxView}">
+            <Setter Property="HeightRequest" Value="275"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource MainColor}"/>
+        </Style>
+
+
+
+
+
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RectSearch.Controls.RectSearchControl"
+    xmlns:viewModel="clr-namespace:RectSearch.ViewModels"
+    xmlns:models="clr-namespace:RectSearch.Models"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <ContentView.Content>
+        <StackLayout>
+            <AbsoluteLayout VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="750"
+                            BackgroundColor="{StaticResource WhiteGrayBackground}">
+                <Rectangle x:Name="MainRectangle"
+                           Fill="{Binding SearchColor}"
+                           RadiusX="10"
+                           RadiusY="10"
+                           WidthRequest="200"
+                           HeightRequest="50"
+                           HorizontalOptions="Center"
+                           Opacity="0.15"
+                           StrokeThickness="0"
+                           AbsoluteLayout.LayoutBounds="0.50, 0.60, 0.35, 0.05"
+                           AbsoluteLayout.LayoutFlags="All"/>
+            </AbsoluteLayout>
+            
+            <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center" VerticalOptions="Center">
+                <Button x:Name="Gbutton" Text="Green" HeightRequest="50" Pressed="Gbutton_Pressed" Margin="20, 0, 20, 0"/>
+                <Button x:Name="Rbutton" Text="Red" HeightRequest="50" Pressed="Rbutton_Pressed" Margin="20, 0, 20, 0"/>
+                <Button x:Name="Bbutton" Text="Blue" HeightRequest="50" Pressed="Bbutton_Pressed" Margin="20, 0, 20, 0"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

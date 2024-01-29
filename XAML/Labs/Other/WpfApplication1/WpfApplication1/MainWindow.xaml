@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="Ma fenêtre" Height="350" Width="525" Background="{x:Null}">
+    <Grid HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="517">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Width="150" Height="100" Orientation="Horizontal"  Grid.Column="0" Grid.Row="0" Margin="55,30,53,30">
+            <Rectangle Width="50" Fill="Blue"/>
+            <Rectangle Width="50" Fill="White"/>
+            <Rectangle Width="50" Fill="Red"/>
+        </StackPanel>
+        <WrapPanel Grid.Column="1" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="259">
+            <Rectangle Width="15" Height="50" Fill="Red"/>
+            <Rectangle Width="130" Height="50" Fill="Blue"/>
+            <Rectangle Width="200" Height="50" Fill="Green"/>
+            <Rectangle Width="40" Height="50" Fill="Red"/>
+            <Rectangle Width="12" Height="50" Fill="Blue"/>
+            <Rectangle Width="133" Height="50" Fill="YellowGreen"/>
+        </WrapPanel>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="0,65,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="258"/>
+        <Button x:Name="button" Content="Change textBox content" Grid.Column="1" HorizontalAlignment="Left" Margin="62,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="137" Click="button_Click"/>
+        <ListBox x:Name="listBox" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="27,35,0,0" Grid.Row="1" VerticalAlignment="Top" Width="205">
+            <ListBoxItem Content="1"/>
+            <ListBoxItem Content="2"/>
+            <ListBoxItem Content="3"/>
+            <ListBoxItem Content="4"/>
+            <ListBoxItem Content="5"/>
+            <ListBoxItem Content="6"/>
+        </ListBox>
+        <ProgressBar x:Name="progressBar" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="10,85,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <ProgressBar x:Name="progressBarIndeterminate" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="142,85,0,0" Grid.Row="1" VerticalAlignment="Top" Width="107" IsIndeterminate="True"/>
+        <Button x:Name="button1" Content="Change progressBar value" Grid.Column="1" HorizontalAlignment="Left" Margin="0,105,0,0" Grid.Row="1" VerticalAlignment="Top" Width="249" Click="button1_Click" Height="54"/>
+    </Grid>
+</Window>

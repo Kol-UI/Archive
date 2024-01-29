@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TabbedPages.Views.ContentPage_Scan"
+    Title="Scan">
+
+    <ContentPage.Content>  
+         <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+             <!-- fond blanc -->
+            <StackLayout Grid.Column="0" Grid.Row="0" Padding="0,0,0,0" BackgroundColor="White">
+
+            </StackLayout>
+
+             <!-- partie du bas -->
+            <StackLayout Grid.Column="0" Grid.Row="1" Padding="0,0,0,0">
+                <Button Text="Horizontalement" TextColor="White" BackgroundColor="Maroon" BorderWidth="1" BorderColor="Red" WidthRequest="150"
+                    HorizontalOptions="Start" HeightRequest="35"/>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="2" Padding="0,0,0,0">
+                <Button Text="Verticalement" TextColor="White" BackgroundColor="Maroon" BorderWidth="1" BorderColor="Red" WidthRequest="150" 
+                    HorizontalOptions="Start" HeightRequest="35"/>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="3" Padding="0,0,0,0">
+                <Button Text="Carré" TextColor="White" BackgroundColor="Maroon" BorderWidth="1" BorderColor="Red" WidthRequest="150" 
+                HorizontalOptions="Start" HeightRequest="35"/>
+            </StackLayout>
+
+             <StackLayout Grid.Column="1" Grid.Row="1">
+                <Label HorizontalOptions="Start" FontSize="8" Text="Informations : &#10;Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
+             </StackLayout>
+             <StackLayout Grid.Column="1" Grid.Row="2">
+                <Label HorizontalOptions="Start" FontSize="8" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+             </StackLayout>
+             <StackLayout Grid.Column="1" Grid.Row="3">
+                <Label HorizontalOptions="Start" FontSize="8" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+             </StackLayout>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

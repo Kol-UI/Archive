@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RectSearch.MainPage"
+             xmlns:controls="clr-namespace:RectSearch.Controls"
+             xmlns:viewModel="clr-namespace:RectSearch.ViewModels"
+             xmlns:models="clr-namespace:RectSearch.Models"
+             BackgroundColor="LightGray">
+
+    <StackLayout Margin="0, 75, 0, 0">
+        <controls:RectSearchControl/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:ShellApp.Views"
+       Title="ShellApp"
+       x:Class="ShellApp.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#5dcec7" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="WhiteSmoke" />
+                <Setter Property="Shell.DisabledColor" Value="LightGray" />
+                <Setter Property="Shell.UnselectedColor" Value="Black" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#5dcec7" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="Black"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="LightSlateGray"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="Black"/>
+                <!-- Actual Tab -->
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="#5dcec7" Margin="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="80"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="10"/>
+          <RowDefinition Height="80"/>
+          <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <BoxView Grid.Column="1" Grid.Row="1" BackgroundColor="White"
+                 CornerRadius="40"/>
+      </Grid>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#74dbd8" Offset="0.3"/>
+            <GradientStop Color="#a5ebe9" Offset="0.5"/>
+            <GradientStop Color="White" Offset="1.0"/>
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>
+
+    <Shell.FlyoutBackdrop>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+           <GradientStop Color="White" Offset="0.7"/>
+           <GradientStop Color="#08a4a7" Offset="1.0"/>
+        </LinearGradientBrush>
+    </Shell.FlyoutBackdrop>
+
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Shell.TabBarIsVisible="True">
+        <ShellContent Title="Menu" Icon="baseline_grid_view_black_36dp.png"
+                      ContentTemplate="{DataTemplate local:ContentPage_1}" />
+        <ShellContent Title="Profile" Icon="outline_account_circle_black_36dp.png"
+                      ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="Scan" Icon="outline_note_add_black_36dp.png"
+                      ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="Calendrier" Icon="outline_calendar_today_black_36dp.png"
+                      ContentTemplate="{DataTemplate local:AboutPage}" />
+        <Tab Title="Recherche" Icon="outline_search_black_36dp.png">
+            <ShellContent Title="Nom du document"
+                          Icon="outline_account_circle_black_36dp.png"
+                          ContentTemplate="{DataTemplate local:ItemsPage}"/>
+            <ShellContent Title="Contenu manuscrit"
+                          Icon="baseline_image_search_black_36dp.png"
+                          ContentTemplate="{DataTemplate local:AboutPage}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <MenuItem>
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                <Label HeightRequest="1" BackgroundColor="#a5ebe9"></Label>
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+
+
+    <ShellContent Title="En cours" Style="{StaticResource BaseStyle}"
+                  Icon="outline_youtube_searched_for_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+    <ShellContent Title="Favoris" Style="{StaticResource BaseStyle}"
+                  Icon="outline_grade_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:NotesListPage2}"/>
+    <ShellContent Title="Notes" Style="{StaticResource BaseStyle}"
+                  Icon="outline_article_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:NotesListPage}"/>
+    <ShellContent Title="Fiches" Style="{StaticResource BaseStyle}"
+                  Icon="outline_aspect_ratio_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+    <ShellContent Title="Cartes" Style="{StaticResource BaseStyle}"
+                  Icon="outline_rule_folder_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+    <ShellContent Title="Memos" Style="{StaticResource BaseStyle}"
+                  Icon="outline_sticky_note_2_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+    <ShellContent Title="Agendas" Style="{StaticResource BaseStyle}"
+                  Icon="outline_fact_check_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+
+
+    <MenuItem>
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                <Label HeightRequest="1" BackgroundColor="#a5ebe9"></Label>
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+
+    <ShellContent Title="Récents" Style="{StaticResource BaseStyle}"
+                  Icon="outline_history_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+    <ShellContent Title="Journal de bord" Style="{StaticResource BaseStyle}"
+                  Icon="outline_account_balance_wallet_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+    <ShellContent Title="Corbeille" Style="{StaticResource BaseStyle}"
+                  Icon="outline_delete_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+
+    <MenuItem>
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                <Label HeightRequest="1" BackgroundColor="#a5ebe9"></Label>
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+
+
+    <ShellContent Title="Actualités" Style="{StaticResource BaseStyle}"
+                  Icon="outline_notifications_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+    <ShellContent Title="Alertes" Style="{StaticResource BaseStyle}"
+                  Icon="outline_info_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+    <ShellContent Title="Aide/FAQ" Style="{StaticResource BaseStyle}"
+                  Icon="outline_help_outline_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:HelpFAQPage}"/>
+    <ShellContent Title="Options" Style="{StaticResource BaseStyle}"
+                  Icon="outline_settings_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+    <ShellContent Title="Boutique" Style="{StaticResource BaseStyle}"
+                  Icon="outline_shopping_cart_black_36dp.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}"/>
+
+        <!--
+        <TabBar>
+            
+        </TabBar>
+        -->
+
+    <!--
+        If you would like to navigate to this content you can do so by calling
+        await Shell.Current.GoToAsync("//LoginPage");
+    -->
+    <!--
+    <TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+    </TabBar>
+    -->
+
+</Shell>

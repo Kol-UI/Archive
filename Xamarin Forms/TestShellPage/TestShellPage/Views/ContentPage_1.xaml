@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TabbedPages.Views.ContentPage_1"
+    Title="Frames">
+
+    <ContentPage.Content>
+        <ScrollView>
+          <StackLayout>
+            <Frame>
+                <Label Text="Exemple Frame dans Scrollview 1"/>
+            </Frame>
+            <Frame>
+                <Label Text="Exemple Frame dans Scrollview 2"/>
+            </Frame>
+              <Frame>
+                  <Label Text="Exemple Frame dans Scrollview 3"/>
+              </Frame>
+              <Frame>
+                  <Label Text="Exemple Frame dans Scrollview 4"/>
+              </Frame>
+              <Frame>
+                <Label Text="Exemple Frame dans Scrollview 5"/>
+            </Frame>
+            <Frame>
+                <Label Text="Exemple Frame dans Scrollview 6"/>
+            </Frame>
+              <Frame>
+                  <Label Text="Exemple Frame dans Scrollview 7"/>
+              </Frame>
+              <Frame>
+                  <Label Text="Exemple Frame dans Scrollview 8"/>
+              </Frame>
+          </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

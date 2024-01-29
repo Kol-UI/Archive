@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ShapesApp.Controls.BarsGraph.BarsTwo"
+    xmlns:local="clr-namespace:ShapesApp.ViewModels"
+    xmlns:pckView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ContentView.BindingContext>
+        <local:GraphBarsViewModels/>
+    </ContentView.BindingContext>
+    <ContentView.Content>
+    
+
+        <!-- GRAPH 2 -->
+                <pckView:PancakeView x:Name="SecondaryFrameGraph"
+                                     CornerRadius="15, 35, 35, 15"
+                                     Border="{pckView:BorderMarkup Color=Transparent, Thickness='1'}"
+                                     HeightRequest="300"
+                                     Margin="10, 10, 10, 15"
+                                     BackgroundGradientStartPoint="1, 0"
+                                     BackgroundGradientEndPoint="0, 1"
+                                     Padding="10">
+                    <pckView:PancakeView.BackgroundGradientStops>
+                        <pckView:GradientStopCollection>
+                            <pckView:GradientStop Color="White" Offset="0.1" />
+                            <pckView:GradientStop Color="{StaticResource BackgroundGray}" Offset="1.0" />
+                        </pckView:GradientStopCollection>
+                    </pckView:PancakeView.BackgroundGradientStops>
+                    <pckView:PancakeView.Shadow>
+                        <pckView:DropShadow Color="{StaticResource ModernGray}" Offset="5,5" />
+                    </pckView:PancakeView.Shadow>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                        <StackLayout Orientation="Vertical" Style="{StaticResource GraphStack}">
+                            <Grid>
+                                <BoxView Style="{StaticResource GraphBoxView}" Opacity="0.4"/>
+                                <BoxView x:Name="Bar1_2" Style="{StaticResource GraphBoxViewValue10}">
+                                    <BoxView.Triggers>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue1_2}" Value="0">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue0}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue1_2}" Value="1">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue1}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue1_2}" Value="2">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue2}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue1_2}" Value="3">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue3}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue1_2}" Value="4">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue4}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue1_2}" Value="5">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue5}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue1_2}" Value="6">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue6}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue1_2}" Value="7">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue7}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue1_2}" Value="8">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue8}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue1_2}" Value="9">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue9}"/>
+                                        </DataTrigger>
+                                    </BoxView.Triggers>
+                                </BoxView>
+                            </Grid>
+                            <Label x:Name="NumberLabel1_2" Style="{StaticResource LabelValueGraphDefault}" Text="{Binding NumberValue1_2}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue1_2}" Value="0">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue0}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue1_2}" Value="1">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue1}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue1_2}" Value="2">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue2}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue1_2}" Value="3">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue3}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue1_2}" Value="4">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue4}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue1_2}" Value="5">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue1_2}" Value="6">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue1_2}" Value="7">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue1_2}" Value="8">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue1_2}" Value="9">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </StackLayout>
+
+
+                        <StackLayout Orientation="Vertical" Style="{StaticResource GraphStack}">
+                            <Grid>
+                                <BoxView Style="{StaticResource GraphBoxView}" Opacity="0.4"/>
+                                <BoxView x:Name="Bar2_2" Style="{StaticResource GraphBoxViewValue10}">
+                                    <BoxView.Triggers>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue2_2}" Value="0">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue0}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue2_2}" Value="1">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue1}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue2_2}" Value="2">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue2}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue2_2}" Value="3">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue3}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue2_2}" Value="4">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue4}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue2_2}" Value="5">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue5}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue2_2}" Value="6">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue6}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue2_2}" Value="7">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue7}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue2_2}" Value="8">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue8}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue2_2}" Value="9">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue9}"/>
+                                        </DataTrigger>
+                                    </BoxView.Triggers>
+                                </BoxView>
+                            </Grid>
+                            <Label x:Name="NumberLabel2_2" Style="{StaticResource LabelValueGraphDefault}" Text="{Binding NumberValue2_2}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue2_2}" Value="0">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue0}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue2_2}" Value="1">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue1}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue2_2}" Value="2">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue2}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue2_2}" Value="3">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue3}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue2_2}" Value="4">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue4}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue2_2}" Value="5">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue2_2}" Value="6">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue2_2}" Value="7">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue2_2}" Value="8">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue2_2}" Value="9">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Style="{StaticResource GraphStack}">
+                            <Grid>
+                                <BoxView Style="{StaticResource GraphBoxView}" Opacity="0.4"/>
+                                <BoxView x:Name="Bar3_2" Style="{StaticResource GraphBoxViewValue10}">
+                                    <BoxView.Triggers>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue3_2}" Value="0">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue0}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue3_2}" Value="1">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue1}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue3_2}" Value="2">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue2}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue3_2}" Value="3">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue3}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue3_2}" Value="4">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue4}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue3_2}" Value="5">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue5}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue3_2}" Value="6">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue6}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue3_2}" Value="7">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue7}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue3_2}" Value="8">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue8}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue3_2}" Value="9">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue9}"/>
+                                        </DataTrigger>
+                                    </BoxView.Triggers>
+                                </BoxView>
+                            </Grid>
+                            <Label x:Name="NumberLabel3_2" Style="{StaticResource LabelValueGraphDefault}" Text="{Binding NumberValue3_2}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue3_2}" Value="0">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue0}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue3_2}" Value="1">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue1}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue3_2}" Value="2">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue2}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue3_2}" Value="3">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue3}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue3_2}" Value="4">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue4}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue3_2}" Value="5">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue3_2}" Value="6">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue3_2}" Value="7">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue3_2}" Value="8">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue3_2}" Value="9">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Style="{StaticResource GraphStack}">
+                            <Grid>
+                                <BoxView Style="{StaticResource GraphBoxView}" Opacity="0.4"/>
+                                <BoxView x:Name="Bar4_2" Style="{StaticResource GraphBoxViewValue10}">
+                                    <BoxView.Triggers>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue4_2}" Value="0">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue0}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue4_2}" Value="1">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue1}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue4_2}" Value="2">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue2}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue4_2}" Value="3">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue3}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue4_2}" Value="4">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue4}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue4_2}" Value="5">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue5}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue4_2}" Value="6">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue6}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue4_2}" Value="7">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue7}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue4_2}" Value="8">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue8}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue4_2}" Value="9">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue9}"/>
+                                        </DataTrigger>
+                                    </BoxView.Triggers>
+                                </BoxView>
+                            </Grid>
+                            <Label x:Name="NumberLabel4_2" Style="{StaticResource LabelValueGraphDefault}" Text="{Binding NumberValue4_2}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue4_2}" Value="0">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue0}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue4_2}" Value="1">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue1}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue4_2}" Value="2">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue2}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue4_2}" Value="3">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue3}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue4_2}" Value="4">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue4}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue4_2}" Value="5">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue4_2}" Value="6">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue4_2}" Value="7">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue4_2}" Value="8">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue4_2}" Value="9">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Style="{StaticResource GraphStack}">
+                            <Grid>
+                                <BoxView Style="{StaticResource GraphBoxView}" Opacity="0.4"/>
+                                <BoxView x:Name="Bar5_2" Style="{StaticResource GraphBoxViewValue10}">
+                                    <BoxView.Triggers>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue5_2}" Value="0">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue0}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue5_2}" Value="1">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue1}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue5_2}" Value="2">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue2}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue5_2}" Value="3">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue3}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue5_2}" Value="4">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue4}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue5_2}" Value="5">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue5}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue5_2}" Value="6">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue6}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue5_2}" Value="7">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue7}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue5_2}" Value="8">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue8}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue5_2}" Value="9">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue9}"/>
+                                        </DataTrigger>
+                                    </BoxView.Triggers>
+                                </BoxView>
+                            </Grid>
+                            <Label x:Name="NumberLabel5_2" Style="{StaticResource LabelValueGraphDefault}" Text="{Binding NumberValue5_2}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue5_2}" Value="0">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue0}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue5_2}" Value="1">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue1}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue5_2}" Value="2">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue2}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue5_2}" Value="3">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue3}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue5_2}" Value="4">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue4}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue5_2}" Value="5">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue5_2}" Value="6">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue5_2}" Value="7">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue5_2}" Value="8">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue5_2}" Value="9">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Style="{StaticResource GraphStack}">
+                            <Grid>
+                                <BoxView Style="{StaticResource GraphBoxView}" Opacity="0.4"/>
+                                <BoxView x:Name="Bar6_2" Style="{StaticResource GraphBoxViewValue10}">
+                                    <BoxView.Triggers>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue6_2}" Value="0">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue0}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue6_2}" Value="1">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue1}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue6_2}" Value="2">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue2}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue6_2}" Value="3">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue3}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue6_2}" Value="4">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue4}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue6_2}" Value="5">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue5}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue6_2}" Value="6">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue6}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue6_2}" Value="7">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue7}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue6_2}" Value="8">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue8}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue6_2}" Value="9">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue9}"/>
+                                        </DataTrigger>
+                                    </BoxView.Triggers>
+                                </BoxView>
+                            </Grid>
+                            <Label x:Name="NumberLabel6_2" Style="{StaticResource LabelValueGraphDefault}" Text="{Binding NumberValue6_2}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue6_2}" Value="0">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue0}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue6_2}" Value="1">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue1}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue6_2}" Value="2">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue2}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue6_2}" Value="3">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue3}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue6_2}" Value="4">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue4}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue6_2}" Value="5">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue6_2}" Value="6">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue6_2}" Value="7">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue6_2}" Value="8">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue6_2}" Value="9">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Style="{StaticResource GraphStack}">
+                            <Grid>
+                                <BoxView Style="{StaticResource GraphBoxView}" Opacity="0.4"/>
+                                <BoxView x:Name="Bar7_2" Style="{StaticResource GraphBoxViewValue10}">
+                                    <BoxView.Triggers>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue7_2}" Value="0">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue0}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue7_2}" Value="1">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue1}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue7_2}" Value="2">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue2}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue7_2}" Value="3">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue3}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue7_2}" Value="4">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue4}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue7_2}" Value="5">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue5}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue7_2}" Value="6">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue6}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue7_2}" Value="7">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue7}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue7_2}" Value="8">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue8}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding NumberValue7_2}" Value="9">
+                                            <Setter Property="Style" Value="{StaticResource GraphBoxViewValue9}"/>
+                                        </DataTrigger>
+                                    </BoxView.Triggers>
+                                </BoxView>
+                            </Grid>
+                            <Label x:Name="NumberLabel7_2" Style="{StaticResource LabelValueGraphDefault}" Text="{Binding NumberValue7_2}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue7_2}" Value="0">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue0}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue7_2}" Value="1">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue1}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue7_2}" Value="2">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue2}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue7_2}" Value="3">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue3}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue7_2}" Value="4">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue4}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue7_2}" Value="5">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue7_2}" Value="6">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue7_2}" Value="7">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue7_2}" Value="8">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding NumberValue7_2}" Value="9">
+                                        <Setter Property="Style" Value="{StaticResource LabelValue5To9}"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </StackLayout>
+
+                    </StackLayout>
+                </pckView:PancakeView>
+
+
+    </ContentView.Content>
+</ContentView>

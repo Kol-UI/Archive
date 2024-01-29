@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellApp.Views.NotesListPage"
+             Title="NOTES"
+             xmlns:local="clr-namespace:ShellApp.ViewModels"  
+             xmlns:model="clr-namespace:ShellApp.Models"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+            <GradientStop Color="#210f86" Offset="0.3"/>
+            <GradientStop Color="#ba412f" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="10, 20, 10, 0"
+                    Android="10, 0"
+                    WinPhone="10, 0" />
+    </ContentPage.Padding>
+
+    <StackLayout Padding="3,3,3,0">
+
+    <!--
+    <Frame x:Name="frameView"
+             BackgroundColor="{Binding Source={x:Reference listViewNotes}, Path=SelectedItem}"
+             HeightRequest="125" Padding="8,0,0,0"
+             CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <BoxView x:Name="boxView"
+                 Color="Gray"
+                 HeightRequest="100"
+                 WidthRequest="75"
+                 CornerRadius="5,5,5,5"
+                 HorizontalOptions="Start"
+                    Grid.Column="0" Grid.Row="0"/>
+            <BoxView Background="{StaticResource Gradient}" Grid.Column="1" Grid.ColumnSpan="2" Margin="4,0,8,0" CornerRadius="5,5,5,5" />
+            <Grid Grid.Row="0" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="Black" Grid.Row="0" Grid.Column="0"  Margin="10, 0, 0, 0" HorizontalOptions="Start" VerticalOptions="Start" FontSize="16" FontAttributes="Bold" Text="Nom de Note" />
+                <Label TextColor="Black" Grid.Row="1" Grid.Column="0"  Margin="10, 0, 0, 0" HorizontalOptions="Start" VerticalOptions="Center" FontSize="12" Text="Hérouville, France"/>
+                <Label TextColor="Black" Grid.Row="2" Grid.Column="0"  Margin="10, 0, 0, 0" HorizontalOptions="Start" VerticalOptions="End" FontSize="12" FontAttributes="Italic" Text="06/05/21"/>
+            </Grid>
+        </Grid>
+    </Frame>
+    -->
+    
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame x:Name="frameView"
+             BackgroundColor="{Binding Source={x:Reference listViewNotes}, Path=SelectedItem}"
+             HeightRequest="125" Padding="8,0,0,0"
+             Grid.ColumnSpan="5" Grid.Row="0"
+             CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <BoxView x:Name="boxView"
+                     Color="Gray"
+                     HeightRequest="100"
+                     WidthRequest="75"
+                     CornerRadius="5,5,5,5"
+                     HorizontalOptions="Start"
+                        Grid.Column="0" Grid.Row="0"/>
+                <BoxView Background="{StaticResource Gradient}" Grid.Column="1"
+                         Grid.ColumnSpan="2" Margin="4,0,8,0"
+                         CornerRadius="5,5,5,5" />
+                <!-- CornerRadius="0,10,0,10" -->
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label TextColor="Black"
+                           Grid.Row="0" Grid.Column="0"
+                           Margin="10, 0, 0, 0"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           Text="Nom de Note" />
+                    <Label TextColor="Black"
+                           Grid.Row="1" Grid.Column="0"
+                           Margin="10, 0, 0, 0"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           FontSize="12"
+                           Text="Hérouville, France"/>
+                    <Label TextColor="Black"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           Margin="10, 0, 0, 0"
+                           HorizontalOptions="Start"
+                           VerticalOptions="End"
+                           FontSize="12"
+                           FontAttributes="Italic"
+                           Text="06/05/21"/>
+                </Grid>
+            </Grid>
+        </Frame>
+
+            <ListView x:Name="listViewNotes"
+                      Grid.Row="1" Grid.ColumnSpan="5"
+                      SeparatorColor="#a5ebe9"
+                      HorizontalScrollBarVisibility="Always"
+                      Background="{StaticResource Gradient2}"
+                      SelectedItem="{Binding Source={x:Reference frameView}, Path=BackgroundColor, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Tapped="ViewCell_Tapped">
+                            <Label Text="Test" TextColor="WhiteSmoke"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Frame Background="{StaticResource Gradient}" Grid.Row="2"
+                   Grid.ColumnSpan="5" CornerRadius="20" Padding="-6,3,-6,0">
+                <StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="20*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Button ImageSource="outline_grade_black_36dp.png"
+                                Grid.Column="0" Grid.Row="0"/>
+                        <Button ImageSource="outline_account_balance_wallet_black_36dp.png"
+                                Grid.Column="1" Grid.Row="0"/>
+                        <Button ImageSource="baseline_ios_share_black_36dp.png"
+                                Grid.Column="2" Grid.Row="0"/>
+                        <Button ImageSource="outline_settings_black_36dp.png"
+                                Grid.Column="3" Grid.Row="0"/>
+                        <Button ImageSource="outline_delete_black_36dp.png"
+                                Grid.Column="4" Grid.Row="0"/>
+                    </Grid>
+                    
+                </StackLayout>
+
+            </Frame>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

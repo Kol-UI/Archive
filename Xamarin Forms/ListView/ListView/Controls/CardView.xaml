@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ListView.Controls.CardView"
+    x:Name="this">
+    <ContentView.Content>
+        <Frame BindingContext="{x:Reference this}"
+           BackgroundColor="{Binding CardColor}"
+           BorderColor="{Binding BorderColor}"
+           CornerRadius="15"
+           HasShadow="True"
+           Padding="8"
+           VerticalOptions="Center"
+           HorizontalOptions="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="4" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Frame IsClippedToBounds="True"
+                   BorderColor="{Binding BorderColor, FallbackValue='Black'}"
+                   BackgroundColor="{Binding IconBackgroundColor, FallbackValue='Gray'}"
+                   CornerRadius="20"
+                   HeightRequest="40"
+                   WidthRequest="40"
+                   HorizontalOptions="Center"
+                   HasShadow="False"
+                   VerticalOptions="Center">
+                <Image Source="{Binding IconImageSource}"
+                       Margin="-20"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       WidthRequest="40"
+                       HeightRequest="30"
+                       Aspect="AspectFill" />
+            </Frame>
+            <Label Grid.Column="1"
+                   Text="{Binding CardTitle, FallbackValue='Card Title'}"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start" />
+            <BoxView Grid.Row="1"
+                     Grid.ColumnSpan="2"
+                     BackgroundColor="{Binding BorderColor, FallbackValue='Black'}"
+                     HeightRequest="2"
+                     HorizontalOptions="Fill" />
+            <Label Grid.Row="2"
+                   Grid.ColumnSpan="2"
+                   Text="{Binding CardDescription, FallbackValue='Card description text.'}"
+                   VerticalTextAlignment="Start"
+                   VerticalOptions="Fill"
+                   HorizontalOptions="Fill" />
+            <CheckBox IsChecked="False"
+                      Grid.Row="0"
+                      Grid.Column="2"
+                      Scale="2.0"
+                      Opacity="0.8"
+                      Color="{Binding CheckBoxColor}"/>
+
+        </Grid>
+    </Frame>
+    </ContentView.Content>
+</ContentView>

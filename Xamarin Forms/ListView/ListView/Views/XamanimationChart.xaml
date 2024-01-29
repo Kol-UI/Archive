@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ListView.Views.XamanimationChart"
+    xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
+    xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    Title="Progress + Chart">
+    <ContentPage.Content>
+        <ScrollView>
+                        <VisualElement.Behaviors>
+                            <xamanimation:ScrollViewScrollBehavior x:Name="ScrollBehavior" />
+                        </VisualElement.Behaviors>
+                        <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200" />
+                                <RowDefinition Height="24" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <!-- HEADER IMAGE -->
+                            <BoxView
+                                    Grid.Row="0"
+                                    Grid.RowSpan="2"
+                                    Background="{StaticResource GradientScooter}"
+                                    x:Name="HeaderImage"
+                                    HorizontalOptions="FillAndExpand">
+                                <VisualElement.Behaviors>
+                                    <xamanimation:AnimateProgressDouble
+                                        TargetProperty="VisualElement.TranslationY"
+                                        Progress="{Binding ScrollY, Source={x:Reference ScrollBehavior}}" 
+                                        Minimum="0"
+                                        Maximum="200"
+                                        From="0"
+                                        To="100"/>
+                                </VisualElement.Behaviors>
+                            </BoxView>
+                            <BoxView 
+                                    Grid.Row="1"
+                                    BackgroundColor="Blue"
+                                    CornerRadius="24, 24, 0, 0">
+                                <VisualElement.Behaviors>
+                                    <xamanimation:AnimateProgressColor
+                                        TargetProperty="VisualElement.BackgroundColor"
+                                        Progress="{Binding ScrollY, Source={x:Reference ScrollBehavior}}" 
+                                        Minimum="0"
+                                        Maximum="200"
+                                        From="PaleGreen"
+                                        To="PaleGoldenrod"/>
+                                    <xamanimation:AnimateProgressCornerRadius
+                                        TargetProperty="BoxView.CornerRadius"
+                                        Progress="{Binding ScrollY, Source={x:Reference ScrollBehavior}}" 
+                                        Minimum="0"
+                                        Maximum="200"
+                                        From="24, 24, 0, 0"
+                                        To="0,0,0,0"/>
+                                </VisualElement.Behaviors>
+                            </BoxView>
+                            <Grid 
+                                    Grid.Row="2"
+                                    BackgroundColor="Black" 
+                                    HeightRequest="500"
+                                    Padding="12">
+                                <VisualElement.Behaviors>
+                                    <xamanimation:AnimateProgressColor
+                                        TargetProperty="VisualElement.BackgroundColor"
+                                        Progress="{Binding ScrollY, Source={x:Reference ScrollBehavior}}" 
+                                        Minimum="0"
+                                        Maximum="200"
+                                        From="Black"
+                                        To="Red"/>
+                                </VisualElement.Behaviors>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                
+
+                                <Frame
+                                       Grid.Column="0"
+                                       Grid.RowSpan="1"
+                                       Style="{StaticResource StatsFrameStyle}"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center">
+                                    <StackLayout>
+                                        <Label Text="Personnal color folder popularity:"
+                                                FontSize="18"
+                                                TextDecorations="Underline"
+                                                TextColor="{StaticResource MainColor}"
+                                                HorizontalOptions="Start"
+                                                VerticalOptions="Start">
+                                               <VisualElement.Behaviors>
+                                                        <xamanimation:AnimateProgressDouble
+                                                            TargetProperty="Label.FontSize"
+                                                            Progress="{Binding ScrollY, Source={x:Reference ScrollBehavior}}" 
+                                                            Minimum="0"
+                                                            Maximum="200"
+                                                            From="12"
+                                                            To="24"/>
+                                                    </VisualElement.Behaviors>
+                                            </Label>
+                                        <forms:ChartView x:Name="ColorPopularityChart"
+                                                         HeightRequest="350"
+                                                         Margin="0,8,0,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+
+
+                            </Grid>
+                        </Grid>
+                    </ScrollView>
+
+        
+
+
+    </ContentPage.Content>
+</ContentPage>

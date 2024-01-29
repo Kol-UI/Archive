@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ListView.Classes"
+    x:Class="ListView.Views.ListViewPageFolder"
+    Title="Folder"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+
+
+            <ListView x:Name="listViewItems" ItemsSource="{Binding .}"
+                      HasUnevenRows="True" BackgroundColor="LightGray" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Frame HasShadow="True"
+                                       CornerRadius="25" BackgroundColor="AntiqueWhite"
+                                       BorderColor="WhiteSmoke" Opacity="0.7"
+                                       HeightRequest="50" Margin="15,4,15,4">
+                                    <Grid RowDefinitions="*" ColumnDefinitions="15,150,*,*" Padding="10,0,0,0">
+                                            <BoxView x:Name="BoxViewColorItem"
+                                                WidthRequest="8"
+                                                MinimumHeightRequest="20"
+                                                CornerRadius="3"
+                                                BackgroundColor="{Binding ItemColor}"
+                                                Opacity="0.5"
+                                                Grid.Column="0"/>
+                                            <Label x:Name="LabelListView"
+                                                   Text="{Binding Name}" Margin="0,0,10,0"
+                                                   HorizontalOptions="Start" VerticalOptions="Center"
+                                                   LineBreakMode="CharacterWrap"
+                                                   Grid.Column="1"/>
+                                            <Button HeightRequest="50" WidthRequest="100"
+                                                    CommandParameter="{Binding .}"
+                                                    BackgroundColor="GhostWhite"
+                                                    TextColor="Green"
+                                                    BorderColor="Green" CornerRadius="25"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    BorderWidth="1"
+                                                    Grid.Column="2"
+                                                    Text="Share"/>
+                                            <Button x:Name="DeleteBtn"
+                                                    HeightRequest="50" WidthRequest="100"
+                                                    BackgroundColor="GhostWhite"
+                                                    CommandParameter="{Binding .}"
+                                                    TextColor="Red"
+                                                    BorderColor="Red" CornerRadius="25"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    BorderWidth="1"
+                                                    Grid.Column="3"
+                                                    Text="Delete"/>
+                                            
+                                    </Grid>
+                                </Frame>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+            
+            <Frame HeightRequest="70" Margin="0,0,0,0" Padding="0,0,0,0" HasShadow="False" BackgroundColor="{StaticResource AppColorsWhite}">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+
+            <Frame Margin="0,-13,0,0" BackgroundColor="{StaticResource AppColorsWhite}" Padding="0,7,0,0" HasShadow="False" CornerRadius="25">
+            <Frame x:Name="FrameAdd" HasShadow="False"
+                    VerticalOptions="Center" Margin="5,0,5,10"
+                    HorizontalOptions="Center"
+                    BackgroundColor="{StaticResource AppColorsBlueTurquoise}"
+                    CornerRadius="25"
+                    BorderColor="LightGray"
+                    HeightRequest="50"
+                    WidthRequest="125"
+                    Padding="0">
+                <Label Text="ADD ITEM" HorizontalOptions="Center" VerticalOptions="Center"
+                       TextColor="{StaticResource AppColorsWhite}" BackgroundColor="Transparent"/>
+            </Frame>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame Margin="10,-35,10,0" WidthRequest="65" BackgroundColor="{StaticResource AppColorsWhite}" Padding="7,0,7,10" HasShadow="False" CornerRadius="30">
+            <Frame x:Name="FrameCenter" HasShadow="False"
+                    Padding="0" HorizontalOptions="Center" VerticalOptions="Center"
+                    BackgroundColor="{StaticResource AppColorsRed}" Margin="0,0,0,0"
+                    CornerRadius="25"
+                    HeightRequest="65"
+                    WidthRequest="65">
+                <Label Text="+" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center"
+                       TextColor="{StaticResource AppColorsWhite}" BackgroundColor="Transparent"/>
+            </Frame>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame Margin="0,-13,0,0" BackgroundColor="{StaticResource AppColorsWhite}" Padding="0,7,0,0" HasShadow="False" CornerRadius="25">
+            <Frame x:Name="FrameClear"
+                    VerticalOptions="Center" Margin="5,0,5,10"
+                    HorizontalOptions="Center"
+                    BackgroundColor="{StaticResource AppColorsBlueTurquoise}"
+                    CornerRadius="25" HasShadow="False"
+                    BorderColor="LightGray"
+                    HeightRequest="50"
+                    WidthRequest="125"
+                    Padding="0">
+                <Label Text="CLEAR LIST" HorizontalOptions="Center" VerticalOptions="Center"
+                       TextColor="{StaticResource AppColorsWhite}" BackgroundColor="Transparent"/>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </Frame.GestureRecognizers>
+            </Frame>
+            </Frame>
+
+
+            </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ShellApp.Views.HelpFAQPage"
+    Title="HELP/FAQ">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#a5ebe9" Offset="0.3"/>
+            <GradientStop Color="#74dbd8" Offset="0.5"/>
+            <GradientStop Color="#08a4a7" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="helpButton">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="DarkSlateGray"/>
+                <Setter Property="BackgroundColor" Value="#a5ebe9"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="BorderColor" Value="#5dcec7"/>
+                <Setter Property="WidthRequest" Value="125"/>
+                <Setter Property="HeightRequest" Value="150"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="ContentLayout" Value="Top,0"/>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList x:Name="CommonStates">
+                        <VisualStateGroup>
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Black"/>
+                                    <Setter Property="Scale" Value="0.95"/>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="LightGray"/>
+                                    <Setter Property="BorderColor" Value="LightGray"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+                     
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Margin="10">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#a5ebe9" Offset="0.3"/>
+                    <GradientStop Color="#74dbd8" Offset="0.5"/>
+                    <GradientStop Color="#08a4a7" Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <Frame Opacity="0.8">
+                <StackLayout>
+
+                <Grid Margin="0,10,0,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="85"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                <ImageButton Grid.Row="0" Grid.Column="0" Source="SCAN_2.png" Clicked="ButtonPart1" Style="{StaticResource ImageButtons}"/>
+                <ImageButton Grid.Row="0" Grid.Column="1" Source="SCAN_3.png" Clicked="ButtonPart2" Style="{StaticResource ImageButtons}"/>
+                <ImageButton Grid.Row="1" Grid.Column="0" Source="COMPTE_2.png" Clicked="ButtonPart3" Style="{StaticResource ImageButtons}"/>
+                <ImageButton Grid.Row="1" Grid.Column="1" Source="reviser_2.png" Clicked="ButtonPart4" Style="{StaticResource ImageButtons}"/>
+                <ImageButton Grid.Row="2" Grid.Column="0" Source="WEB_2.png" Clicked="ButtonPart5" Style="{StaticResource ImageButtons}"/>
+                <ImageButton Grid.Row="2" Grid.Column="1" Source="fonctionnalites_2.png" Clicked="ButtonPart6" Style="{StaticResource ImageButtons}"/>
+                </Grid>
+
+                <Label Text="Vous ne trouvez pas la réponse à votre question ? Contactez-nous directement. Nous serons ravis de vous lire." FontSize="16"/>
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ListView.Views.FrameCorners">
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid RowDefinitions="50, 100, 30, 100, 30, 100, 30, 100" ColumnDefinitions="20, 0.40*, 20, 0.40*, 20">
+            
+            <Frame
+                Grid.Row="1"
+                Grid.Column="1"
+                Padding="0"
+                Background="{StaticResource GradientBackground}"
+                CornerRadius="0"
+                HasShadow="False"
+                Margin="0,0,0,30"/>
+            <Frame
+                Grid.Row="1"
+                Grid.Column="1"
+                Padding="0"
+                Background="{StaticResource GradientBackground}"
+                HasShadow="False"
+                CornerRadius="30">
+            </Frame>
+
+
+
+            <Frame
+                Grid.Row="1"
+                Grid.Column="3"
+                Padding="0"
+                BackgroundColor="Green"
+                CornerRadius="0"/>
+            <Frame
+                Grid.Row="1"
+                Grid.Column="3"
+                Padding="0"
+                BackgroundColor="Yellow"
+                HasShadow="True"
+                CornerRadius="20">
+            </Frame>
+
+
+
+            <Frame
+                Grid.Row="3"
+                Grid.Column="1"
+                Padding="0"
+                Background="{StaticResource GradientBackground}"
+                CornerRadius="0"
+                HasShadow="False"
+                Margin="30,0,0,0"/>
+            <Frame
+                Grid.Row="3"
+                Grid.Column="1"
+                Padding="0"
+                Background="{StaticResource GradientBackground}"
+                HasShadow="False"
+                CornerRadius="30">
+            </Frame>
+
+
+
+            <Frame
+                Grid.Row="5"
+                Grid.Column="1"
+                Padding="0"
+                Background="{StaticResource GradientBackground}"
+                CornerRadius="0"
+                HasShadow="False"
+                Margin="0,30,0,0"/>
+            <Frame
+                Grid.Row="5"
+                Grid.Column="1"
+                Padding="0"
+                Background="{StaticResource GradientBackground}"
+                HasShadow="False"
+                CornerRadius="30">
+            </Frame>
+
+
+
+            <Frame
+                Grid.Row="5"
+                Grid.Column="3"
+                Padding="0"
+                Background="{StaticResource GradientBackground}"
+                CornerRadius="0"
+                HasShadow="False"
+                Margin="0,0,30,0"/>
+            <Frame
+                Grid.Row="5"
+                Grid.Column="3"
+                Padding="0"
+                Background="{StaticResource GradientBackground}"
+                HasShadow="False"
+                CornerRadius="30">
+            </Frame>
+
+
+            <Frame
+                Grid.Row="7"
+                Grid.Column="1"
+                Padding="0"
+                Background="{StaticResource GradientSomeBlue}"
+                CornerRadius="0"
+                HasShadow="False"
+                Margin="0,45,45,0"/>
+            <Frame
+                Grid.Row="7"
+                Grid.Column="1"
+                Padding="0"
+                Background="{StaticResource GradientSomeBlue}"
+                HasShadow="False"
+                CornerRadius="45">
+            </Frame>
+
+            <Frame
+                Grid.Row="7"
+                Grid.Column="3"
+                Padding="0"
+                Background="{StaticResource GradientSomeGreen}"
+                CornerRadius="0"
+                HasShadow="False"
+                Margin="45,45,0,0"/>
+            <Frame
+                Grid.Row="7"
+                Grid.Column="3"
+                Padding="0"
+                Background="{StaticResource GradientSomeGreen}"
+                HasShadow="False"
+                CornerRadius="45">
+                <Label Text="Test"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       FontSize="16"
+                       TextColor="{StaticResource AppColorsBlack}"
+                       BackgroundColor="Transparent"/>
+            </Frame>
+
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

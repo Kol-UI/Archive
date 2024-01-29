@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp1"
+    xmlns:views="clr-namespace:MauiApp1.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <!--<ShellContent Route="DynamicPage" ContentTemplate="{DataTemplate views:NavigatorPage}" />-->
+    <!--<ShellContent Route="DynamicPage" ContentTemplate="{DataTemplate local:DynamicPage}" />-->
+    <!--<ShellContent Route="DynamicNavigationPage" ContentTemplate="{DataTemplate views:DynamicNavigationPage}" />-->
+
+
+    <!-- Main navigation items within the top-level Shell -->
+    <!--<ShellContent Title="Home" Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />-->
+
+    <!-- Nested Shell for NavigatorPage -->
+    <!--<ShellContent Title="Navigator" Route="NavigatorPage" ContentTemplate="{DataTemplate views:NavigatorPage}" />-->
+
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage"/>
+
+    <!-- (worked)
+    <ShellContent
+        Title="Navigator"
+        ContentTemplate="{DataTemplate views:NavigatorPage}"
+        Route="NavigatorPage" />
+
+    <FlyoutItem Title="Some Title">
+        <ShellContent Route="GridDemoPage" ContentTemplate="{DataTemplate local:GridDemoPage}" />
+    </FlyoutItem>
+    -->
+
+    <!--
+        Example :
+
+        <FlyoutItem Title="Some Title">
+        <ShellContent Route="Page1" ContentTemplate="{DataTemplate local:Page1}" />
+        <ShellContent Route="Page2" ContentTemplate="{DataTemplate local:Page2}" />
+        <ShellContent Route="Page3" ContentTemplate="{DataTemplate local:Page3}" />
+    </FlyoutItem>
+    -->
+
+</Shell>

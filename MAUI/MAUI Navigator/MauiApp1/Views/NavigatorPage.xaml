@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:local="clr-namespace:MauiApp1.ViewModels"
+             xmlns:converter="clr-namespace:MauiApp1.Converters.NavigationConverters"
+             x:Class="MauiApp1.Views.NavigatorPage"
+             Title="Navigator Page"
+             BackgroundColor="#1A1B1E">
+    <ContentPage.BindingContext>
+        <local:NavigatorPageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <converter:ButtonItemConverter x:Key="ButtonColorConverter" />
+    </ContentPage.Resources>
+
+    
+    <VerticalStackLayout
+        x:Name="test"
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center" >
+
+        <CollectionView
+            x:Name="navigationCollection"
+            ItemsSource="{Binding ButtonItems}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    Span="3" 
+                    VerticalItemSpacing="20"
+                    HorizontalItemSpacing="30"
+                    Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Button
+                        x:Name="navigationBtn"
+                        Text="{Binding Text}"
+                        TextColor="{Binding Category, Converter={StaticResource ButtonColorConverter}}"
+                        Clicked="NavigationBtn_Clicked"
+                        BackgroundColor="#41434B"
+                        />
+                    <!--
+                    <Button
+                        x:Name="navigationBtn"
+                        Text="{Binding Text}"
+                        Clicked="NavigationBtn_Clicked"
+                        BackgroundColor="{Binding Category, Converter={StaticResource ButtonColorConverter}}"
+                        /> -->
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TabbedApp.Views.HomeListView"
+    Title="SC">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+          <StackLayout>
+            <Label Text="Menu principal" HorizontalOptions="Center" TextColor="#9d6b37" FontSize="18"/>
+
+        <Grid RowSpacing="5" ColumnSpacing="5" Padding="10,10,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" x:Name="col1"/>
+                <ColumnDefinition Width="*" x:Name="col2"/>
+                <ColumnDefinition Width="*" x:Name="col3"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75" x:Name="row1"/>
+                <RowDefinition Height="75" x:Name="row2"/>
+                <RowDefinition Height="75" x:Name="row3"/>
+                <RowDefinition Height="75" x:Name="row4"/>
+                <RowDefinition Height="75" x:Name="row5"/>
+                <RowDefinition Height="75" x:Name="row6"/>
+            </Grid.RowDefinitions>
+                <!-- Ligne 1 -->
+                <Button Grid.Row="0" Grid.Column="0" Text="Recherche" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_search_black_36dp.png"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="En cours" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_youtube_searched_for_black_36dp.png"/>
+                <Button Grid.Row="0" Grid.Column="2" Text="Journal" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_account_balance_wallet_black_36dp.png"/>
+                <!-- Ligne 2 -->
+                <Button Grid.Row="1" Grid.Column="0" Text="Agendas" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_fact_check_black_36dp.png"/>
+                <Button Grid.Row="1" Grid.Column="1" Text="Notes" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_article_black_36dp.png"/>
+                <Button Grid.Row="1" Grid.Column="2" Text="Fiches" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_aspect_ratio_black_36dp.png"/>
+                <!-- Ligne 3 -->
+                <Button Grid.Row="2" Grid.Column="0" Text="Cartes" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_rule_folder_black_36dp.png"/>
+                <Button Grid.Row="2" Grid.Column="1" Text="Memos" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_sticky_note_2_black_36dp.png"/>
+                <Button Grid.Row="2" Grid.Column="2" Text="Favoris" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_grade_black_36dp.png"/>
+                <!-- Ligne 4 -->
+                <Button Grid.Row="3" Grid.Column="0" Text="Récents" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_history_black_36dp.png"/>
+                <Button Grid.Row="3" Grid.Column="1" Text="Corbeille" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_delete_black_36dp.png"/>
+                <Button Grid.Row="3" Grid.Column="2" Text="Options" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_settings_black_36dp.png"/>
+                <!-- Ligne 5 -->
+                <Button Grid.Row="4" Grid.Column="0" Text="Alertes" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue " WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_info_black_36dp.png"/>
+                <Button Grid.Row="4" Grid.Column="1" Text="Aide/FAQ" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_help_outline_black_36dp.png"/>
+                <Button Grid.Row="4" Grid.Column="2" Text="Actualités" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_notifications_black_36dp.png"/>
+                <!-- Ligne 6 -->
+                <Button Grid.Row="5" Grid.Column="0" Text="Boutique" FontSize="12"
+                        TextColor="Black" BackgroundColor="WhiteSmoke" BorderWidth="1"
+                        BorderColor="Blue" WidthRequest="125" HeightRequest="150"
+                        ContentLayout="Top,0" HorizontalOptions="Start"
+                        ImageSource="outline_shopping_cart_black_36dp.png"/>
+
+            </Grid>
+          </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

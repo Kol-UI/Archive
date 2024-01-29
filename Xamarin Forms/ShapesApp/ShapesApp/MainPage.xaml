@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShapesApp.MainPage"
+             xmlns:StatsControl="clr-namespace:ShapesApp.Controls"
+             xmlns:viewModel="clr-namespace:ShapesApp.ViewModels"
+             xmlns:models="clr-namespace:ShapesApp.Models"
+             xmlns:pckView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             BackgroundColor="{StaticResource WhiteGrayBackground}">
+    <ContentPage.BindingContext>
+        <viewModel:GraphBarsViewModels/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+
+
+            <pckView:PancakeView CornerRadius="0,0,70,0"
+                                 Border="{pckView:BorderMarkup Color=Transparent, Thickness='10'}"
+                                 HeightRequest="175"
+                                 Margin="0, 0, 0, 0"
+                                 Padding="4"
+                                 BackgroundGradientStartPoint="1, 0"
+                                 BackgroundGradientEndPoint="0, 1">
+                <pckView:PancakeView.BackgroundGradientStops>
+                      <pckView:GradientStopCollection>
+                         <pckView:GradientStop Color="{StaticResource StartGradientColor}" Offset="0" />
+                         <pckView:GradientStop Color="{StaticResource EndGradientColor}" Offset=".65" />
+                      </pckView:GradientStopCollection>
+                   </pckView:PancakeView.BackgroundGradientStops>
+                <StackLayout Orientation="Vertical" Margin="0, 0, 0, 0">
+                    <StatsControl:InfoStats BackgroundColor="Transparent"/>
+
+                    <Label Text="Welcome to your Dashboard Progress !"
+                           HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           FontSize="20"/>
+                    
+                    <Label Text="Here you can review all your stats and global progress."
+                           HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           FontSize="12"/>
+
+                    
+
+                </StackLayout>
+            </pckView:PancakeView>
+
+
+
+            <Label Text="Progress Dashboard"
+                   Margin="10,34,0,10"
+                   FontSize="10"
+                   TextColor="{StaticResource BaseLightTextColor}"/>
+
+
+            <StatsControl:InfoStats />
+            <StatsControl:StatsFrame />
+
+
+            <Label Text="Weekly Sessions"
+                   Margin="10,34,0,10"
+                   FontSize="10"
+                   TextColor="{StaticResource BaseLightTextColor}"/>
+
+            
+            <StatsControl:GraphBars BackgroundColor="Transparent"/>
+
+            <Label Text="Features Stats"
+                   Style="{StaticResource TitleStyle}"/>
+
+            <StatsControl:FeaturesStatsFrame />
+
+            <Label Text="Share and Contacts"
+                   Style="{StaticResource TitleStyle}"/>
+
+            <StatsControl:ShareContactStatsFrame />
+
+            <Label Text="Current Stockage"
+                   Style="{StaticResource TitleStyle}"/>
+
+            <StatsControl:CurrentStockageStatsFrame />
+
+            <Label Text="Scan and Photos"
+                   Style="{StaticResource TitleStyle}"/>
+
+            <StatsControl:ScanPhotoStatsFrame />
+
+            <Label Text="Profile and Security"
+                   Style="{StaticResource TitleStyle}"/>
+
+            <StatsControl:ProfileSecurityStatsFrame />
+
+
+
+
+            <Label Text="Session Progress History"
+                   Style="{StaticResource TitleStyle}"/>
+            
+        
+        
+            <StatsControl:ProgressFrames x:Name="testCollection"/>
+
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                </Grid.RowDefinitions>
+
+                <Frame HasShadow="True" HeightRequest="50" Padding="0" Grid.Column="0" Grid.Row="0" CornerRadius="5" Margin="5, 0, 5, 0">
+                    <StackLayout Orientation="Horizontal" Padding="0">
+                        <Label Text="Flashcard Deck 1" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="12" Margin="5, 0, 0, 0" FontAttributes="Bold"/>
+                        <Frame Style="{StaticResource FrameVioletGradient}">
+                            <Label Text="+25%" TextColor="{StaticResource OxColorsBlack}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="True" HeightRequest="50" Padding="0" Grid.Column="1" Grid.Row="0" CornerRadius="5" Margin="5, 0, 5, 0">
+                    <StackLayout Orientation="Horizontal" Padding="0">
+                        <Label Text="Flashcard Deck 2" VerticalOptions="Center" HorizontalOptions="StartAndExpand"  FontSize="12" Margin="5, 0, 0, 0" FontAttributes="Bold"/>
+                        <Frame Style="{StaticResource FrameVioletGradient}">
+                            <Label Text="+10%" TextColor="{StaticResource OxColorsBlack}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="True" HeightRequest="50" Padding="0" Grid.Column="0" Grid.Row="1" CornerRadius="5" Margin="5, 0, 5, 0">
+                    <StackLayout Orientation="Horizontal" Padding="0">
+                        <Label Text="Flashcard Deck 3" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="12" Margin="5, 0, 0, 0" FontAttributes="Bold"/>
+                        <Frame Style="{StaticResource FrameVioletGradient}">
+                            <Label Text="+25%" TextColor="{StaticResource OxColorsBlack}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="True" HeightRequest="50" Padding="0" Grid.Column="1" Grid.Row="1" CornerRadius="5" Margin="5, 0, 5, 0">
+                    <StackLayout Orientation="Horizontal" Padding="0">
+                        <Label Text="Flashcard Deck 4" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="12" Margin="5, 0, 0, 0" FontAttributes="Bold"/>
+                        <Frame Style="{StaticResource FrameYellowGradient}">
+                            <Label Text="-5%" TextColor="{StaticResource OxColorsBlack}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="True" HeightRequest="40" Padding="0" Grid.Column="0" Grid.Row="2" CornerRadius="5" Margin="5, 0, 5, 0">
+                    <StackLayout Orientation="Horizontal" Padding="0">
+                        <Label Text="Flashcard Deck 5" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="12" Margin="5, 0, 0, 0" FontAttributes="Bold"/>
+                        <Frame Style="{StaticResource FrameGreenGradient}">
+                            <Label Text="+55%" TextColor="{StaticResource OxColorsBlack}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="True" HeightRequest="50" Padding="0" Grid.Column="1" Grid.Row="2" CornerRadius="5" Margin="5, 0, 5, 0">
+                    <StackLayout Orientation="Horizontal" Padding="0">
+                        <Label Text="Flashcard Deck 6" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="12" Margin="5, 0, 0, 0" FontAttributes="Bold"/>
+                        <Frame Style="{StaticResource FrameRedGradient}">
+                            <Label Text="-80%" TextColor="{StaticResource OxColorsBlack}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="True" HeightRequest="40" Padding="0" Grid.Column="0" Grid.Row="3" CornerRadius="5" Margin="5, 0, 5, 0">
+                    <StackLayout Orientation="Horizontal" Padding="0">
+                        <Label Text="Flashcard Deck 7" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="12" Margin="5, 0, 0, 0" FontAttributes="Bold"/>
+                        <Frame Style="{StaticResource FrameGreenGradient}">
+                            <Label Text="+86%" TextColor="{StaticResource OxColorsBlack}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="True" HeightRequest="50" Padding="0" Grid.Column="1" Grid.Row="3" CornerRadius="5" Margin="5, 0, 5, 0">
+                    <StackLayout Orientation="Horizontal" Padding="0">
+                        <Label Text="Flashcard Deck 8" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="12" Margin="5, 0, 0, 0" FontAttributes="Bold"/>
+                        <Frame Style="{StaticResource FrameOrangeGradient}">
+                            <Label Text="-35%" TextColor="{StaticResource OxColorsBlack}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="True" HeightRequest="50" Padding="0" Grid.Column="0" Grid.Row="4" CornerRadius="5" Margin="5, 0, 5, 0">
+                    <StackLayout Orientation="Horizontal" Padding="0">
+                        <Label Text="Flashcard Deck 9" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="12" Margin="5, 0, 0, 0" FontAttributes="Bold"/>
+                        <Frame Style="{StaticResource FrameYellowGradient}">
+                            <Label Text="-10%" TextColor="{StaticResource OxColorsBlack}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="True" HeightRequest="50" Padding="0" Grid.Column="1" Grid.Row="4" CornerRadius="5" Margin="5, 0, 5, 0">
+                    <StackLayout Orientation="Horizontal" Padding="0">
+                        <Label Text="Flashcard Deck 10" VerticalOptions="Center" HorizontalOptions="StartAndExpand"  FontSize="12" Margin="5, 0, 0, 0" FontAttributes="Bold"/>
+                        <Frame Style="{StaticResource FrameVioletGradient}">
+                            <Label Text="+10%" TextColor="{StaticResource OxColorsBlack}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+            </Grid>
+
+        
+
+
+            <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+            <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+            <Label FontSize="16" Padding="30,24,30,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Learn more at "/>
+                            <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Line X1="25"
+                    Y1="20"
+                    X2="200"
+                    Y2="20"
+                    StrokeLineCap="Round"
+                    Stroke="Blue"
+                    StrokeThickness="10"
+                    />
+
+            <BoxView HeightRequest="1"
+                        Color="Red"
+                        Margin ="40, 0, 40, 0"/>
+
+            <BoxView HeightRequest="10"
+                        CornerRadius="10"
+                        Color="Green"
+                        Margin ="40, 0, 40, 0"/>
+
+            <BoxView HeightRequest="15"
+                        CornerRadius="15"
+                        BackgroundColor="Orange"
+                        HorizontalOptions="Start"
+                        WidthRequest="30"
+                        Margin ="40, 0, 40, 0"/>
+
+            <Frame Style="{StaticResource GradientFrame}"/>
+            <Frame Style="{StaticResource GradientFrame}"
+                    WidthRequest="20"
+                    HorizontalOptions="Start"/>
+
+
+
+
+
+
+        
+                <pckView:PancakeView CornerRadius="50, 10, 10, 50"
+                                     Border="{pckView:BorderMarkup Color=Transparent, Thickness='2'}"
+                                     HeightRequest="300"
+                                     Margin="10, 0, 10, 0"
+                                     BackgroundGradientStartPoint="1, 0"
+                                     BackgroundGradientEndPoint="0, 1"
+                                     Padding="10">
+                    <pckView:PancakeView.BackgroundGradientStops>
+                        <pckView:GradientStopCollection>
+                          <pckView:GradientStop Color="{StaticResource NavigationBarGray}" Offset="0.1" />
+                          <pckView:GradientStop Color="{StaticResource BackgroundGray}" Offset="1.0" />
+                        </pckView:GradientStopCollection>
+                   </pckView:PancakeView.BackgroundGradientStops>
+                    <StackLayout Orientation="Horizontal">
+                        <BoxView HeightRequest="275"
+                                    CornerRadius="15"
+                                    BackgroundColor="Orange"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End"
+                                    WidthRequest="30"
+                                    Margin="5, 0, 5, 0"/>
+                        <BoxView HeightRequest="160"
+                                    CornerRadius="15"
+                                    BackgroundColor="Orange"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End"
+                                    WidthRequest="30"
+                                    Margin ="5, 0, 5, 0"/>
+                        <BoxView HeightRequest="150"
+                                    CornerRadius="15"
+                                    BackgroundColor="Orange"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End"
+                                    WidthRequest="30"
+                                    Margin ="5, 0, 5, 0"/>
+                        <BoxView HeightRequest="125"
+                                    CornerRadius="15"
+                                    BackgroundColor="Orange"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End"
+                                    WidthRequest="30"
+                                    Margin ="5, 0, 5, 0"/>
+                        <BoxView HeightRequest="56"
+                                    CornerRadius="15"
+                                    BackgroundColor="Orange"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End"
+                                    WidthRequest="30"
+                                    Margin ="5, 0, 5, 0"/>
+                        <BoxView HeightRequest="190"
+                                    CornerRadius="15"
+                                    BackgroundColor="Orange"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End"
+                                    WidthRequest="30"
+                                    Margin ="5, 0, 5, 0"/>
+                        <BoxView HeightRequest="275"
+                                    CornerRadius="15"
+                                    BackgroundColor="Orange"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End"
+                                    WidthRequest="30"
+                                    Margin ="5, 0, 5, 0"/>
+                    </StackLayout>
+                </pckView:PancakeView>
+
+            
+            
+                <SearchBar Placeholder="Search..." PlaceholderColor="Green" />
+               
+        
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
