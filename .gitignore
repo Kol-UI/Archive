@@ -1,0 +1,293 @@
+# Visual Studio Code
+.vscode/
+
+# PhpStorm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# User-specific files
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# R specific
+.Rhistory
+.Rapp.history
+.Renviron
+.Rproj.user/
+
+# RStudio specific
+.Rproj.user/
+.Rproj*
+
+# Temporary files
+.RData
+.RDataTmp
+.RDS
+.RDataTmp/
+.RDS/
+.Rcheck/
+.Ruserdata
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files
+*.pdf
+*.html
+*.md
+
+# Shiny app logs
+logs/
+*.log
+
+# R Markdown intermediate files
+*_cache/
+*_files/
+
+# knitr and R markdown default cache directories
+.Rproj.knit.bak/
+.cache/
+
+# R package: install the library and its dependencies
+*-lib/
+*-lock
+
+# C
+# Compiled Object files
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.a
+
+# Executables
+a.out
+
+# Dart
+*.dart.js
+*.dart.js.map
+*.lock
+*.packages
+.pub/
+/build/
+
+# Flutter
+/.idea/
+/.vscode/
+*.iml
+*.ipr
+*.iws
+*.lock
+.dart_tool/
+.pub/
+/build/
+ios/Flutter/App.framework/
+ios/Flutter/Flutter.framework/
+android/build/
+web/build/
+
+# Xcode
+*.swp
+*~
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcworkspace/
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+
+# Swift Package Manager
+.Package.resolved
+.build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+!Podfile
+xcuserdata/
+!default.xcworkspace
+
+# Carthage
+Carthage/Checkouts
+Carthage/Build
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Xamarin
+bin/
+obj/
+*.userprefs
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*_i.c
+*_p.c
+*_l.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.build/
+[Tt]est[Rr]esult*/
+[Bb]in/
+[Ll]og/
+[Ll]ogs/
+
+# MAUI
+bin_microsoft.netcore_maui/
+obj_microsoft.netcore_maui/
+*.xcframework/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Package
+*.nupkg
+**/packages/*
+!**/packages/repositories.config
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Xamarin.Android
+build/
+obj/
+
+# Xamarin.iOS
+build/
+*.mdimporter
+*.lproj
+*.storyboardc
+*.xcuserstate
+DerivedData/
+Icon?
+profile
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+xcuserdata/
+*.moved-aside
+*.gcno
+
+# Xamarin.Forms
+*.db
+*.sqlite
+*.sqlite3
+*.sdf
+*.log
+
+# Xamarin.Mac
+bin/
+obj/
+
+# Mono
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Linux
+*~
+
+# General
+Thumbs.db
+*.log
+
+# R profiling
+Rprof
+Rprofmon.out
+
+# Environment variables
+.Renviron
+.Rprofile
+
+# macOS
+.DS_Store
