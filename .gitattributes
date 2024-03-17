@@ -1,3 +1,0 @@
-*.xaml linguist-language=XML
-*.razor linguist-language=HTML+Razor
-*.cshtml linguist-language=HTML+Razor
