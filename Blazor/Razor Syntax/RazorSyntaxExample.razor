@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASP.NET Razor Syntax</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome, @Model.Name!</h1>
+        <p>Your account balance is: $@Model.Balance</p>
+        @if (Model.IsPremium)
+        {
+            <p>Congratulations! You are a premium member.</p>
+        }
+        else
+        {
+            <p>Upgrade to premium for exclusive benefits.</p>
+        }
+    </div>
+</body>
+</html>
