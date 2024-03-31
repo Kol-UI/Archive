@@ -39,7 +39,6 @@
 
 # Output files
 *.pdf
-*.html
 *.md
 
 # Shiny app logs
